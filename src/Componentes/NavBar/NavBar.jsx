@@ -37,7 +37,7 @@ export default function App() {
         />
         <NavbarBrand>
           <p className="font-bold " style={{ color: 'black' }}>
-            Marcus.Guershon.Hotel
+            MARCUS GERSHON HOTEL
           </p>
         </NavbarBrand>
       </NavbarContent>
