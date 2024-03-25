@@ -6,6 +6,7 @@ function Home() {
     <div className="App">
       <NavBar></NavBar>
       <Headers></Headers>
+      <br></br>
       <ResponsiveImageTextComponent></ResponsiveImageTextComponent>
     </div>
   );
