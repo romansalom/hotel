@@ -1,0 +1,8 @@
+.image-3d-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-3d-hover:hover {
+    transform: scale(1.05) rotateX(10deg) rotateY(10deg);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
