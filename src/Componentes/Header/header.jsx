@@ -3,8 +3,14 @@ import { Image } from '@nextui-org/react';
 
 function Headers() {
   return (
-    <div class="w-full">
-      <img src="header.jpg" class="w-full h-auto object-cover" />
+    <div className="relative w-full">
+      {/* La imagen se ajustará al ancho completo y la altura será automática */}
+      <Image
+        src="foto2.jpg"
+        className="w-full h-auto object-cover"
+        alt="Banner"
+      />
+      {/* Contenedor de texto superpuesto con sombra para mejorar la visibilidad */}
     </div>
   );
 }

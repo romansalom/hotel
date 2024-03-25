@@ -28,7 +28,7 @@ export default function App() {
     <Navbar
       shouldHideOnScroll
       onMenuOpenChange={setIsMenuOpen}
-      style={{ backgroundColor: '#747474' }}
+      style={{ backgroundColor: 'white' }}
     >
       <NavbarContent className="flex justify-start items-center  w-full">
         <NavbarMenuToggle
@@ -36,7 +36,7 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold " style={{ color: '#e4e4e4' }}>
+          <p className="font-bold " style={{ color: 'black' }}>
             Marcus.Guershon.Hotel
           </p>
         </NavbarBrand>
@@ -46,7 +46,7 @@ export default function App() {
         <NavbarItem>
           <Link href="#">
             <a
-              style={{ color: '#e4e4e4', textDecoration: 'none' }}
+              style={{ color: 'black', textDecoration: 'none' }}
               className="hover-underline-animation"
             >
               Condo-Hotel
@@ -58,7 +58,7 @@ export default function App() {
           <Link href="#">
             {' '}
             <a
-              style={{ color: '#e4e4e4', textDecoration: 'none' }}
+              style={{ color: 'black', textDecoration: 'none' }}
               className="hover-underline-animation"
             >
               Proyectos
@@ -69,7 +69,7 @@ export default function App() {
           <Link href="#">
             {' '}
             <a
-              style={{ color: '#e4e4e4', textDecoration: 'none' }}
+              style={{ color: 'black', textDecoration: 'none' }}
               className="hover-underline-animation"
             >
               Imagenes{' '}
@@ -80,7 +80,7 @@ export default function App() {
           <Link href="#">
             {' '}
             <a
-              style={{ color: '#e4e4e4', textDecoration: 'none' }}
+              style={{ color: 'black', textDecoration: 'none' }}
               className="hover-underline-animation"
             >
               Inversion
@@ -91,7 +91,7 @@ export default function App() {
           <Link href="#">
             {' '}
             <a
-              style={{ color: '#e4e4e4', textDecoration: 'none' }}
+              style={{ color: 'black', textDecoration: 'none' }}
               className="hover-underline-animation"
             >
               Contacto
