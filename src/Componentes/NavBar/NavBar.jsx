@@ -8,8 +8,6 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Link,
-  Button,
-  Image,
 } from '@nextui-org/react';
 import './navBAR.css';
 export default function App() {
@@ -44,58 +42,46 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link href="#">
-            <a
-              style={{ color: 'black', textDecoration: 'none' }}
-              className="hover-underline-animation"
-            >
-              Condo-Hotel
-            </a>
+          <Link
+            style={{ color: 'black', textDecoration: 'none' }}
+            className="hover-underline-animation"
+          >
+            Condo-Hotel
           </Link>
         </NavbarItem>
 
         <NavbarItem>
-          <Link href="#">
-            {' '}
-            <a
-              style={{ color: 'black', textDecoration: 'none' }}
-              className="hover-underline-animation"
-            >
-              Proyectos
-            </a>
+          <Link
+            style={{ color: 'black', textDecoration: 'none' }}
+            className="hover-underline-animation"
+          >
+            Proyectos
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#">
-            {' '}
-            <a
-              style={{ color: 'black', textDecoration: 'none' }}
-              className="hover-underline-animation"
-            >
-              Imagenes{' '}
-            </a>
+          <Link
+            style={{ color: 'black', textDecoration: 'none' }}
+            className="hover-underline-animation"
+          >
+            Imagenes{' '}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#">
-            {' '}
-            <a
-              style={{ color: 'black', textDecoration: 'none' }}
-              className="hover-underline-animation"
-            >
-              Inversion
-            </a>
+          <Link
+            href="#"
+            style={{ color: 'black', textDecoration: 'none' }}
+            className="hover-underline-animation"
+          >
+            Inversion
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#">
-            {' '}
-            <a
-              style={{ color: 'black', textDecoration: 'none' }}
-              className="hover-underline-animation"
-            >
-              Contacto
-            </a>
+          <Link
+            href="nosotros"
+            style={{ color: 'black', textDecoration: 'none' }}
+            className="hover-underline-animation"
+          >
+            Contacto
           </Link>
         </NavbarItem>
         {/* Otros elementos de NavbarContent */}

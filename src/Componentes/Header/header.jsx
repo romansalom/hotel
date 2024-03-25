@@ -22,7 +22,7 @@ function Headers() {
         >
           {' '}
           <svg
-            class="w-[48px] h-[48px] text-white dark:text-white"
+            className="w-[48px] h-[48px] text-white dark:text-white"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -32,7 +32,7 @@ function Headers() {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               stroke-width="3"
               d="m8 7 4 4 4-4m-8 6 4 4 4-4"
