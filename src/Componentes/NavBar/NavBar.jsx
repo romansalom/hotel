@@ -38,8 +38,8 @@ export default function App() {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          <p className="font-bold " style={{ color: 'black' }}>
+        <NavbarBrand className="flex justify-center w-full">
+          <p className="font-bold text-center" style={{ color: 'black' }}>
             MARCUS GERSHON HOTEL
           </p>
         </NavbarBrand>
