@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Image } from '@nextui-org/react';
 
 function Headers() {
+  useEffect(() => {
+    // Configurar un temporizador para hacer scroll después de 3 segundos
+    const timer = setTimeout(() => {
+      // Verificar si el elemento existe y hacer scroll hacia él
+      const component = document.getElementById('responsiveImageTextComponent');
+      if (component) {
+        component.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 2000); //
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="relative w-full bg-black flex justify-center items-center">
       {/* La primera imagen centrada y ajustada al ancho completo */}
