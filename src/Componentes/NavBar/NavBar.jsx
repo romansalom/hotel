@@ -27,6 +27,12 @@ export default function App() {
       component.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const handleScrollToComponentinversion = () => {
+    const component = document.getElementById('inversion');
+    if (component) {
+      component.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Navbar
       shouldHideOnScroll
@@ -78,7 +84,7 @@ export default function App() {
             style={{ color: 'black', textDecoration: 'none' }}
             className="hover-underline-animation"
           >
-            Inversion
+            <button onClick={handleScrollToComponentinversion}>Inverti</button>
           </Link>
         </NavbarItem>
         <NavbarItem>

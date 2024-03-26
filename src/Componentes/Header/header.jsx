@@ -58,7 +58,7 @@ function Headers() {
           </svg>
         </div>{' '}
         {/* Texto debajo de la flecha */}
-        <p className="text-white font-bold mt-2">Inverti en Vaca Muerta</p>
+        <p className="text-white font-bold mt-2"></p>
       </div>
     </div>
   );
