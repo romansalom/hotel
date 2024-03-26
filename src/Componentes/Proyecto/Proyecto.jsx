@@ -3,7 +3,10 @@ import { Image } from '@nextui-org/react';
 
 const ResponsiveImageTextComponent = () => {
   return (
-    <div className="container mx-auto p-4 mb-8">
+    <div
+      id="responsiveImageTextComponent"
+      className="container mx-auto p-4 mb-8"
+    >
       <div className="flex flex-col md:flex-row items-center justify-center">
         {/* Imagen más grande y más cerca del texto en pantallas grandes */}
         <div className="md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5 relative mb-4 md:mb-0 hover:scale-10 hover:-translate-y-2 hover:shadow-2xl transition duration-300 ease-in-out">

@@ -7,7 +7,7 @@ function Home() {
       <NavBar></NavBar>
       <Headers></Headers>
       <br></br>
-      <ResponsiveImageTextComponent></ResponsiveImageTextComponent>
+      <ResponsiveImageTextComponent id="responsiveImageTextComponent"></ResponsiveImageTextComponent>
     </div>
   );
 }

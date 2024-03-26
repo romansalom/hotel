@@ -21,7 +21,12 @@ export default function App() {
     'Inversion',
     'Contacto',
   ];
-
+  const handleScrollToComponent = () => {
+    const component = document.getElementById('responsiveImageTextComponent');
+    if (component) {
+      component.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Navbar
       shouldHideOnScroll
@@ -45,8 +50,9 @@ export default function App() {
           <Link
             style={{ color: 'black', textDecoration: 'none' }}
             className="hover-underline-animation"
+            onClick={handleScrollToComponent}
           >
-            Condo-Hotel
+            <button onClick={handleScrollToComponent}>Condo-Hotel</button>
           </Link>
         </NavbarItem>
 
