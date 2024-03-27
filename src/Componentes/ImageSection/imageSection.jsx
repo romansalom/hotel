@@ -16,7 +16,7 @@ export default function ImageSection() {
   };
 
   return (
-    <div className="flex justify-center bg-black">
+    <div className="flex justify-center bg-gray mt-10">
       <div className="grid grid-cols-1 sm:grid-cols-2  ">
         <div className="relative">
           <img
@@ -37,7 +37,7 @@ export default function ImageSection() {
         <div className="relative">
           <img
             className="h-auto max-w-full  cursor-pointer hover:filter hover:brightness-75 transition duration-300"
-            src="header.jpg"
+            src="foto5.jpeg"
             alt="Imagen 3"
             onClick={() => openModal('header.jpg')}
           />
