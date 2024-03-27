@@ -2,6 +2,7 @@ import NavBar from '../Componentes/NavBar/NavBar';
 import Headers from '../Componentes/Header/header';
 import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
 import Inversion from '../Componentes/Inversion/inversion';
+import ImageSection from '../Componentes/ImageSection/imageSection';
 function Home() {
   return (
     <div className="App">
@@ -10,6 +11,7 @@ function Home() {
       <br></br>
       <ResponsiveImageTextComponent id="responsiveImageTextComponent"></ResponsiveImageTextComponent>
       <Inversion id="inversion"></Inversion>
+      <ImageSection></ImageSection>
     </div>
   );
 }
