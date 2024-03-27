@@ -39,7 +39,7 @@ export default function ImageSection() {
             className="h-auto max-w-full  cursor-pointer hover:filter hover:brightness-75 transition duration-300"
             src="foto5.jpeg"
             alt="Imagen 3"
-            onClick={() => openModal('header.jpg')}
+            onClick={() => openModal('foto5.jpeg')}
           />
         </div>
         <div className="relative">
