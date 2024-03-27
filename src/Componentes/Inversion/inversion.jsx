@@ -39,7 +39,7 @@ function Inversion() {
       </div>
 
       {/* Segundo componente */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-white p-4">
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-light-gray p-4">
         <h2 className="text-3xl lg:text-4xl text-black font-bold mt-10">
           {' '}
           {/* Reducir margen inferior */}
@@ -56,7 +56,7 @@ function Inversion() {
                 Nombre
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-white-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Nombre"
@@ -72,7 +72,7 @@ function Inversion() {
                 Apellido
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-white-200  text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-last-name"
                 type="text"
                 placeholder="Apellido"
@@ -88,7 +88,7 @@ function Inversion() {
                 Telefono
               </label>
               <input
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-white-200  text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-last-name"
                 type="text"
                 placeholder="Telefono"
@@ -104,7 +104,7 @@ function Inversion() {
                 Telefono
               </label>
               <textarea
-                className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                className="appearance-none block w-full bg-white-200  text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="grid-last-name"
                 type="text"
                 placeholder="Mnesaje"
