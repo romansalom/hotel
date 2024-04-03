@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Image } from '@nextui-org/react';
 
 export default function ImageSection() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,7 +15,7 @@ export default function ImageSection() {
   };
 
   return (
-    <div className="flex justify-center bg-gray mt-10">
+    <div id="imagenes" className="flex justify-center bg-gray mt-10 ">
       <div className="grid grid-cols-1 sm:grid-cols-2  ">
         <div className="relative">
           <img

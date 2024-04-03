@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Image } from '@nextui-org/react';
 
 function Headers() {
-  useEffect(() => {
+  /* useEffect(() => {
     // Configurar un temporizador para hacer scroll después de 5 segundos
     const timer = setTimeout(() => {
       // Verificar si el elemento existe y hacer scroll hacia él
@@ -19,9 +19,9 @@ function Headers() {
 
     return () => clearTimeout(timer);
   }, []);
-
+*/
   return (
-    <div className="relative w-full bg-black flex justify-center items-center">
+    <div  id="Header"className="relative w-full bg-black flex justify-center items-center">
       {/* La primera imagen centrada y ajustada al ancho completo */}
       <Image
         src="46413055_transparent-2.png"

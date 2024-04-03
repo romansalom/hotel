@@ -11,7 +11,7 @@ function Home() {
       <br></br>
       <ResponsiveImageTextComponent id="responsiveImageTextComponent"></ResponsiveImageTextComponent>
       <Inversion id="inversion"></Inversion>
-      <ImageSection></ImageSection>
+      <ImageSection id="imagenes"></ImageSection>
     </div>
   );
 }
