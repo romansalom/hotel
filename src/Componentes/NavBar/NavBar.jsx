@@ -43,7 +43,7 @@ export default function App() {
     <Navbar
       shouldHideOnScroll
       onMenuOpenChange={setIsMenuOpen}
-      style={{ backgroundColor: 'white' }}
+      style={{ backgroundColor: 'black' }}
     >
       <NavbarContent className="flex justify-start items-center  w-full">
         <NavbarMenuToggle
@@ -51,7 +51,7 @@ export default function App() {
           className="sm:hidden"
         />
         <NavbarBrand className="flex justify-center w-full">
-          <p className="font-bold text-center" style={{ color: 'black' }}>
+          <p className="font-bold text-center" style={{ color: 'white' }}>
             MARCUS GERSHON HOTEL
           </p>
         </NavbarBrand>
@@ -60,8 +60,8 @@ export default function App() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link
-            style={{ color: 'black', textDecoration: 'none' }}
-            className="hover-underline-animation"
+            style={{ color: 'white', textDecoration: 'none' }}
+            className=" font-bold text-center hover-underline-animation"
             onClick={handleScrollToComponent}
           >
             <button onClick={handleScrollToComponent}>Condo-Hotel</button>
@@ -70,24 +70,24 @@ export default function App() {
 
         <NavbarItem>
           <Link
-            style={{ color: 'black', textDecoration: 'none' }}
-            className="hover-underline-animation"
+            style={{ color: 'white', textDecoration: 'none' }}
+            className=" font-bold text-center hover-underline-animation"
           >
             Proyectos
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            style={{ color: 'black', textDecoration: 'none' }}
-            className="hover-underline-animation"
+            style={{ color: 'white', textDecoration: 'none' }}
+            className="font-bold text-center hover-underline-animation"
           >
             <button onClick={handleScrollToComponentimagenes}>Imagenes</button>
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            style={{ color: 'black', textDecoration: 'none' }}
-            className="hover-underline-animation"
+            style={{ color: 'white', textDecoration: 'none' }}
+            className=" font-bold text-center hover-underline-animation"
           >
             <button onClick={handleScrollToComponentinversion}>Inverti</button>
           </Link>
@@ -95,8 +95,8 @@ export default function App() {
         <NavbarItem>
           <Link
             href="nosotros"
-            style={{ color: 'black', textDecoration: 'none' }}
-            className="hover-underline-animation"
+            style={{ color: 'white', textDecoration: 'none' }}
+            className=" font-bold text-center hover-underline-animation"
           >
             Contacto
           </Link>
@@ -109,7 +109,7 @@ export default function App() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               style={{
-                color: 'black',
+                color: 'white',
               }}
               className="w-full"
               href="#"

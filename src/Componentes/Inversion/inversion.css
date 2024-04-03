@@ -3,10 +3,10 @@
 }
 
 .bg-light-gray {
-    background-color: #c4c1c1 !important;
+    background-color: #0000003a !important;
 }
 
 .contenedor-zoom {
-    zoom: 80%;
+    zoom: 100%;
     /* o transform: scale(0.8); */
 }
