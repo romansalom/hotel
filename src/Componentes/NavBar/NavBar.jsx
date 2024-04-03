@@ -17,11 +17,13 @@ export default function App() {
     const component = document.getElementById('responsiveImageTextComponent');
     if (component) {
       component.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
     }
   };
   const handleScrollToComponentinversion = () => {
     const component = document.getElementById('inversion');
     if (component) {
+      setIsMenuOpen(false);
       component.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -29,11 +31,11 @@ export default function App() {
     const component = document.getElementById('imagenes');
     if (component) {
       component.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
     }
   };
   return (
     <Navbar
-      shouldHideOnScroll
       onMenuOpenChange={setIsMenuOpen}
       style={{ backgroundColor: 'black' }}
     >
