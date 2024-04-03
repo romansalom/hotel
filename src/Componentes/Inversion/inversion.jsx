@@ -6,18 +6,12 @@ function Inversion() {
   return (
     <div
       id="inversion"
-      className="mt-5 flex flex-wrap justify-center items-center"
+      className="mt-5 flex flex-wrap justify-center items-stretch"
     >
       {/* Primer componente */}
-      <div className="w-full md:w-1/2 relative flex flex-col justify-center items-center bg-dark-gray p-4">
-        <br></br>
-        <br></br>
-        <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8 text-center ">
-          {' '}
-          {/* Reducir margen superior */}
+      <div className="w-full sm:w-1/2 relative flex flex-col justify-center items-center bg-dark-gray p-4">
+        <div className="sm:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8 text-center">
           <h2 className="text-3xl lg:text-4xl text-white font-bold mb-5">
-            {' '}
-            {/* Reducir margen inferior */}
             Inverti en Vaca Muerta
           </h2>
           <p className="text-lg lg:text-l text-white  font-normal nowrap w-   ">
@@ -27,26 +21,21 @@ function Inversion() {
             con un estilo diferente.
           </p>
         </div>
-        <div className="w-full flex justify-center ">
-          {' '}
-          {/* Ajuste de margen inferior */}{' '}
+        <div className="w-full flex justify-center mt-8">
           <Image
-            src="46413055_transparent-2.png"
+            src="copi2.png"
             alt="Logo"
-            className="w-64 md:w-72 lg:w-80 xl:w-96 2xl:w-108" // Aumentar tamaño del logo
+            className="w-64 sm:w-72 lg:w-80 xl:w-96 2xl:w-108"
           />
         </div>
       </div>
 
       {/* Segundo componente */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-light-gray p-4">
+      <div className="w-full sm:w-1/2 flex flex-col justify-center items-center bg-light-gray p-4">
         <h2 className="text-3xl lg:text-4xl text-black font-bold mt-10">
-          {' '}
-          {/* Reducir margen inferior */}
-          Dejanos Tu Mensjae{' '}
+          Dejanos Tu Mensaje
         </h2>
-        <br></br>
-        <form className="w-full max-w-lg ">
+        <form className="w-full max-w-lg mt-8">
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
