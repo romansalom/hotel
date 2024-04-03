@@ -3,6 +3,7 @@ import Headers from '../Componentes/Header/header';
 import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
 import Inversion from '../Componentes/Inversion/inversion';
 import ImageSection from '../Componentes/ImageSection/imageSection';
+import './home.css';
 function Home() {
   return (
     <div className="App">

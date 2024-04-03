@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-
+import './imagen.css';
 export default function ImageSection() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const images = ['foto6.jpg', 'foto6.jpg', 'foto5.jpeg', 'foto5.jpeg']; // Lista de imágenes
 
   const openModal = (imageSrc) => {
     setSelectedImage(imageSrc);
@@ -14,42 +16,41 @@ export default function ImageSection() {
     setModalOpen(false);
   };
 
+  const handleImageClick = (imageSrc) => {
+    openModal(imageSrc);
+  };
+
+  const handlePrevClick = () => {
+    const currentIndex = images.indexOf(selectedImage);
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    setSelectedImage(images[prevIndex]);
+  };
+
+  const handleNextClick = () => {
+    const currentIndex = images.indexOf(selectedImage);
+    const nextIndex = (currentIndex + 1) % images.length;
+    setSelectedImage(images[nextIndex]);
+  };
+
   return (
-    <div id="imagenes" className="flex justify-center bg-gray mt-10 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2  ">
-        <div className="relative">
-          <img
-            className="h-auto max-w-full cursor-pointer hover:filter hover:brightness-75 transition duration-300"
-            src="foto6.jpg"
-            alt="Imagen 1"
-            onClick={() => openModal('foto6.jpg')}
-          />
-        </div>
-        <div className="relative">
-          <img
-            className="h-auto max-w-full  cursor-pointer hover:filter hover:brightness-75 transition duration-300"
-            src="foto6.jpg"
-            alt="Imagen 2"
-            onClick={() => openModal('foto6.jpg')}
-          />
-        </div>
-        <div className="relative">
-          <img
-            className="h-auto max-w-full  cursor-pointer hover:filter hover:brightness-75 transition duration-300"
-            src="foto5.jpeg"
-            alt="Imagen 3"
-            onClick={() => openModal('foto5.jpeg')}
-          />
-        </div>
-        <div className="relative">
-          <img
-            className="h-auto max-w-full  cursor-pointer hover:filter hover:brightness-75 transition duration-300"
-            src="foto5.jpeg"
-            alt="Imagen 4"
-            onClick={() => openModal('foto5.jpeg')}
-          />
-        </div>
-        {/* Agrega más imágenes aquí con el mismo patrón */}
+    <div
+      id="imagenes"
+      className="contenedor-zoom flex justify-center bg-gray mt-10 "
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        {images.map((image, index) => (
+          <div
+            className="relative"
+            key={index}
+            onClick={() => handleImageClick(image)}
+          >
+            <img
+              className="h-auto max-w-full cursor-pointer hover:filter hover:brightness-75 transition duration-300"
+              src={image}
+              alt={`Imagen ${index + 1}`}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Modal */}
@@ -70,19 +71,23 @@ export default function ImageSection() {
             {/* Slider controls */}
             <button
               type="button"
-              className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-white"
               data-carousel-prev
+              onClick={handlePrevClick}
             >
               {/* Previous button */}
               {/* Agrega el SVG del botón previo aquí */}
+              &lt;
             </button>
             <button
               type="button"
-              className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-white"
               data-carousel-next
+              onClick={handleNextClick}
             >
               {/* Next button */}
               {/* Agrega el SVG del botón siguiente aquí */}
+              &gt;
             </button>
           </div>
           {/* Botón de cierre del modal */}
