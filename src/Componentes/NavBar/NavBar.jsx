@@ -13,14 +13,6 @@ import './navBAR.css';
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    'Condo-Hotel',
-    'Proyecto',
-    'Imagenes',
-    'Inversion',
-    'Inversion',
-    'Contacto',
-  ];
   const handleScrollToComponent = () => {
     const component = document.getElementById('responsiveImageTextComponent');
     if (component) {
@@ -48,7 +40,8 @@ export default function App() {
       <NavbarContent className="flex justify-start items-center  w-full">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
+          className="sm:hidden "
+          style={{ color: 'white', textDecoration: 'none' }}
         />
         <NavbarBrand className="flex justify-center w-full">
           <p className="font-bold text-center" style={{ color: 'white' }}>
@@ -104,20 +97,80 @@ export default function App() {
         {/* Otros elementos de NavbarContent */}
       </NavbarContent>
 
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              style={{
-                color: 'white',
-              }}
-              className="w-full"
-              href="#"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+      <NavbarMenu style={{ marginBottom: 0 }}>
+        <NavbarMenuItem>
+          <div className="flex flex-col items-center">
+            <NavbarItem>
+              <Link
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '1.2rem',
+                  marginBottom: '0.5rem',
+                }}
+                className="font-bold text-center hover-underline-animation"
+                onClick={handleScrollToComponent}
+              >
+                Condo-Hotel
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '1.2rem',
+                  marginBottom: '0.5rem',
+                }}
+                className="font-bold text-center hover-underline-animation"
+              >
+                Proyectos
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '1.2rem',
+                  marginBottom: '0.5rem',
+                }}
+                className="font-bold text-center hover-underline-animation"
+                onClick={handleScrollToComponentimagenes}
+              >
+                Imagenes
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '1.2rem',
+                  marginBottom: '0.5rem',
+                }}
+                className="font-bold text-center hover-underline-animation"
+                onClick={handleScrollToComponentinversion}
+              >
+                Inverti
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link
+                href="nosotros"
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                  fontSize: '1.2rem',
+                  marginBottom: '0.5rem',
+                }}
+                className="font-bold text-center hover-underline-animation"
+              >
+                Contacto
+              </Link>
+            </NavbarItem>
+          </div>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
