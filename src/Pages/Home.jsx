@@ -1,3 +1,4 @@
+import React from 'react';
 import NavBar from '../Componentes/NavBar/NavBar';
 import Headers from '../Componentes/Header/header';
 import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
@@ -7,21 +8,26 @@ import Características from '../Componentes/Características/características';
 import Banner from '../Componentes/Banner/banner';
 import Footer from '../Componentes/Footer/footer';
 import './home.css';
+
 function Home() {
+  const mensaje = '¡Hola! Estoy interesado.';
+
   return (
     <div className="App">
-      <NavBar></NavBar>
-      <Headers></Headers>
-      <br></br>
-      <ResponsiveImageTextComponent id="responsiveImageTextComponent"></ResponsiveImageTextComponent>
-      <Inversion id="inversion"></Inversion>
-      <ImageSection id="imagenes"></ImageSection>
-      <Características></Características>
-      <Banner></Banner>
-      <Footer></Footer>
+      <NavBar />
+      <Headers />
+      <br />
+      <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
+      <Inversion id="inversion" />
+      <ImageSection id="imagenes" />
+      <Características />
+      <Banner />
+      <Footer />
       <div className="whatsapp-float">
         <a
-          href="https://wa.me/+5491164339338"
+          href={`https://wa.me/+5491164339338?text=${encodeURIComponent(
+            mensaje
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
