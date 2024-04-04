@@ -35,7 +35,7 @@ export default function ImageSection() {
   return (
     <div
       id="imagenes"
-      className="contenedor-zoom flex justify-center bg-gray  "
+      className="contenedor-zoom flex justify-center bg-gray mt-20 "
     >
       <div className="grid grid-cols-1 sm:grid-cols-2">
         {images.map((image, index) => (

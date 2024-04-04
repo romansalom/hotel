@@ -4,7 +4,8 @@ import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
 import Inversion from '../Componentes/Inversion/inversion';
 import ImageSection from '../Componentes/ImageSection/imageSection';
 import Características from '../Componentes/Características/características';
-import Banner from '../Banner/banner';
+import Banner from '../Componentes/Banner/banner';
+import Footer from '../Componentes/Footer/footer';
 function Home() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function Home() {
       <ImageSection id="imagenes"></ImageSection>
       <Características></Características>
       <Banner></Banner>
+      <Footer></Footer>
     </div>
   );
 }

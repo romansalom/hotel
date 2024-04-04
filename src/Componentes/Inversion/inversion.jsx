@@ -31,7 +31,7 @@ function Inversion() {
       </div>
 
       {/* Segundo componente */}
-      <div className="w-full sm:w-1/2 flex flex-col justify-center items-center bg-light-gray p-4">
+      <div className="w-full sm:w-1/2 flex flex-col justify-center items-center bg-gray-300 p-4">
         <h2 className="text-3xl lg:text-4xl text-black font-bold mt-10">
           ¿Querés saber más?
         </h2>

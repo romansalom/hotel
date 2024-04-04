@@ -14,9 +14,9 @@ function Características() {
       </h1>
 
       {/* Contenedor para los conjuntos de imagen y texto */}
-      <div className="flex flex-col justify-center items-center gap-8 lg:flex-row lg:gap-16">
+      <div className="flex flex-col justify-center items-center gap-8 lg:flex-row lg:gap-20">
         {/* Primer conjunto de imagen y texto */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center ">
           <Image src="0-icon (1).png" className="feature-image mb-5" />
           <h2 className="text-black text-lg lg:text-xl  mb-2">Renta Espera</h2>
           <p className="text-black text-sm lg:text-base ">
@@ -37,7 +37,7 @@ function Características() {
 
         {/* Tercer conjunto de imagen y texto */}
         <div className="flex flex-col items-center">
-          <Image src="0-icon.png" className="feature-image" />
+          <Image src="0-icon.png" className="feature-image mb-5" />
           <h2 className="text-black text-lg lg:text-xl  mb-2">
             Inversión en Pequeña Escala
           </h2>

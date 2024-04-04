@@ -1,6 +1,12 @@
 import React from 'react';
-import { Button, Image } from '@nextui-org/react';
+import { Button } from '@nextui-org/react';
 import './banner.css'; // Asegúrate de importar tu archivo CSS aquí
+const handleScrollToComponentinversion = () => {
+  const component = document.getElementById('inversion');
+  if (component) {
+    component.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 function Banner() {
   return (
@@ -14,7 +20,7 @@ function Banner() {
         </h1>
       </div>
       <div className="flex justify-center items-center">
-        <Button>CONSULTAR</Button>
+        <Button onClick={handleScrollToComponentinversion}>CONSULTAR</Button>
       </div>
     </div>
   );
