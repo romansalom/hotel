@@ -1,0 +1,15 @@
+#banner {
+    padding: 0.5rem 0.25rem;
+    /* Ajustar el padding para hacer el banner más delgado */
+}
+
+@media (min-width: 768px) {
+    #banner {
+        padding: 0.5rem 0.25rem;
+        /* Ajustar el padding para tamaños de pantalla más grandes */
+    }
+}
+
+.bg-light-blue {
+    background-color: #049CCC !important;
+}

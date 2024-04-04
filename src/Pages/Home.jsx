@@ -3,7 +3,8 @@ import Headers from '../Componentes/Header/header';
 import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
 import Inversion from '../Componentes/Inversion/inversion';
 import ImageSection from '../Componentes/ImageSection/imageSection';
-import './home.css';
+import Características from '../Componentes/Características/características';
+import Banner from '../Banner/banner';
 function Home() {
   return (
     <div className="App">
@@ -13,6 +14,8 @@ function Home() {
       <ResponsiveImageTextComponent id="responsiveImageTextComponent"></ResponsiveImageTextComponent>
       <Inversion id="inversion"></Inversion>
       <ImageSection id="imagenes"></ImageSection>
+      <Características></Características>
+      <Banner></Banner>
     </div>
   );
 }

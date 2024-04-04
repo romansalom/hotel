@@ -1,0 +1,35 @@
+.feature-container {
+    margin-bottom: 2rem;
+    /* Espacio entre cada conjunto de imagen y texto */
+    width: 100%;
+    /* Asegurar que cada conjunto ocupe todo el ancho disponible */
+}
+
+.feature-container h2 {
+    font-size: 1.5rem;
+    /* Tamaño de fuente para los títulos en pantallas grandes */
+}
+
+.feature-container p {
+    font-size: 1rem;
+    /* Tamaño de fuente para los textos en pantallas grandes */
+}
+
+@media (min-width: 768px) {
+    .feature-container {
+        width: calc(100% / 3);
+        /* Para que cada conjunto ocupe 1/3 del ancho en pantallas grandes */
+    }
+}
+
+.feature-container {
+    flex: 1 0 250px;
+    /* Ajusta el ancho máximo de cada contenedor */
+}
+
+.feature-image {
+    max-width: 100px;
+    /* Establece el ancho máximo de las imágenes */
+    height: auto;
+    /* Permite que la altura de las imágenes se ajuste automáticamente */
+}
