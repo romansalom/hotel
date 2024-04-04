@@ -1,4 +1,4 @@
-import { Button, Image } from '@nextui-org/react';
+import { Image } from '@nextui-org/react';
 
 function Footer() {
   return (
@@ -41,7 +41,7 @@ function Footer() {
       <div className="text-center">
         <p className="font-bold">Seguinos en redes</p>
         <div className="flex justify-center space-x-2">
-          <a href="#" className="hover:text-gray-300">
+          <a href="/" className="hover:text-gray-300">
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
@@ -59,7 +59,7 @@ function Footer() {
             </svg>
           </a>
 
-          <a href="#" className="hover:text-gray-300">
+          <a href="/" className="hover:text-gray-300">
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
@@ -76,7 +76,7 @@ function Footer() {
               />
             </svg>
           </a>
-          <a href="#" className="hover:text-gray-300">
+          <a href="/" className="hover:text-gray-300">
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
@@ -95,7 +95,7 @@ function Footer() {
             </svg>
           </a>
 
-          <a href="#" className="hover:text-gray-300">
+          <a href="/" className="hover:text-gray-300">
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"

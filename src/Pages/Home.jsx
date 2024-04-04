@@ -6,6 +6,7 @@ import ImageSection from '../Componentes/ImageSection/imageSection';
 import Características from '../Componentes/Características/características';
 import Banner from '../Componentes/Banner/banner';
 import Footer from '../Componentes/Footer/footer';
+import './home.css';
 function Home() {
   return (
     <div className="App">
@@ -18,6 +19,15 @@ function Home() {
       <Características></Características>
       <Banner></Banner>
       <Footer></Footer>
+      <div className="whatsapp-float">
+        <a
+          href="https://wa.me/yourphonenumber"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
   );
 }
