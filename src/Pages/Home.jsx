@@ -18,8 +18,9 @@ function Home() {
       <Headers />
       <br />
       <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
-      <Inversion id="inversion" />
+
       <ImageSection id="imagenes" />
+      <Inversion id="inversion" />
       <Características />
       <Banner />
       <Footer />

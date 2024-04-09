@@ -33,72 +33,82 @@ export default function ImageSection() {
   };
 
   return (
-    <div
-      id="imagenes"
-      className="contenedor-zoom flex justify-center bg-gray mt-10 "
-    >
-      <div className="grid grid-cols-1 sm:grid-cols-2">
-        {images.map((image, index) => (
-          <div
-            className="relative"
-            key={index}
-            onClick={() => handleImageClick(image)}
-          >
-            <img
-              className="h-auto max-w-full cursor-pointer hover:filter hover:brightness-75 transition duration-300"
-              src={image}
-              alt={`Imagen ${index + 1}`}
-            />
-          </div>
-        ))}
-      </div>
+    <div id="imagenes ">
+      <span class="relative flex justify-center bg-white mt-10 mb-10">
+        <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-200"></div>
 
-      {/* Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
-          <div
-            id="gallery"
-            className="relative w-full max-w-screen-xl mx-auto"
-            data-carousel="slide"
-          >
-            {/* Carousel wrapper */}
-            <div className="relative h-96 md:h-5/6 overflow-hidden rounded-lg">
-              {/* Render the selected image */}
-              <div className="flex items-center justify-center h-full">
-                <img src={selectedImage} alt="" className="h-auto max-w-full" />
-              </div>
+        <span class="relative z-10 bg-white px-6 " style={{ color: 'white' }}>
+          csddddddddddddddddddd
+        </span>
+      </span>
+      <div className="contenedor-zoom flex justify-center bg-gray  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2">
+          {images.map((image, index) => (
+            <div
+              className="relative"
+              key={index}
+              onClick={() => handleImageClick(image)}
+            >
+              <img
+                className="h-auto max-w-full cursor-pointer hover:filter hover:brightness-75 transition duration-300"
+                src={image}
+                alt={`Imagen ${index + 1}`}
+              />
             </div>
-            {/* Slider controls */}
-            <button
-              type="button"
-              className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-white"
-              data-carousel-prev
-              onClick={handlePrevClick}
+          ))}
+        </div>
+
+        {/* Modal */}
+        {modalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90">
+            <div
+              id="gallery"
+              className="relative w-full max-w-screen-xl mx-auto"
+              data-carousel="slide"
             >
-              {/* Previous button */}
-              {/* Agrega el SVG del botón previo aquí */}
-              &lt;
-            </button>
+              {/* Carousel wrapper */}
+              <div className="relative h-96 md:h-5/6 overflow-hidden rounded-lg">
+                {/* Render the selected image */}
+                <div className="flex items-center justify-center h-full">
+                  <img
+                    src={selectedImage}
+                    alt=""
+                    className="h-auto max-w-full"
+                  />
+                </div>
+              </div>
+              {/* Slider controls */}
+              <button
+                type="button"
+                className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-white"
+                data-carousel-prev
+                onClick={handlePrevClick}
+              >
+                {/* Previous button */}
+                {/* Agrega el SVG del botón previo aquí */}
+                &lt;
+              </button>
+              <button
+                type="button"
+                className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-white"
+                data-carousel-next
+                onClick={handleNextClick}
+              >
+                {/* Next button */}
+                {/* Agrega el SVG del botón siguiente aquí */}
+                &gt;
+              </button>
+            </div>
+            {/* Botón de cierre del modal */}
             <button
-              type="button"
-              className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-white"
-              data-carousel-next
-              onClick={handleNextClick}
+              className="absolute top-4 right-4 z-50 text-white"
+              onClick={closeModal}
             >
-              {/* Next button */}
-              {/* Agrega el SVG del botón siguiente aquí */}
-              &gt;
+              {/* Agrega el icono de cierre aquí */}X
             </button>
           </div>
-          {/* Botón de cierre del modal */}
-          <button
-            className="absolute top-4 right-4 z-50 text-white"
-            onClick={closeModal}
-          >
-            {/* Agrega el icono de cierre aquí */}X
-          </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
