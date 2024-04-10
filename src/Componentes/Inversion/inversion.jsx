@@ -29,16 +29,14 @@ function Inversion() {
         </div>
 
         {/* Segundo componente */}
-        <div className="w-full sm:w-1/2 flex flex-col  justify-center items-center    p-4">
+        <div className="w-full sm:w-1/2 flex flex-col bg-light-gray  justify-center items-center    p-4">
           <h2
             className="text-3xl lg:text-4xl text-white font-bold mt-10"
             style={{ color: ' black ' }}
           >
             ¿Querés saber más?
           </h2>
-          <p className="text-lg lg:text-l text-white  font-normal nowrap w-   ">
-            Estamos listos para asesorarte
-          </p>
+
           <form className="w-full max-w-lg mt-8">
             <div className="flex flex-wrap -mx-3 ">
               <div className="w-full sm:w-1/2 px-3 flex flex-col">
