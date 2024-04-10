@@ -40,7 +40,6 @@ function Footer() {
       {/* Redes sociales */}
       <div className="bg-dark-gray text-white p-4">
         <div className="text-center">
-          <p className="font-bold">Seguinos en redes</p>
           <div className="flex justify-center space-x-2">
             <a href="/" className="hover:text-gray-300">
               <svg
