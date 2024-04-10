@@ -32,3 +32,8 @@
     background-color: #128c7e;
     /* Cambia el color de fondo al pasar el cursor sobre él */
 }
+
+.whatsapp-float i.fab {
+    font-size: 30px;
+    /* Aumenta el tamaño del ícono */
+}

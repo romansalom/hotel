@@ -9,7 +9,7 @@ function Inversion() {
         <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-200"></div>
 
         <span class="relative z-10 bg-white px-6 " style={{ color: 'white' }}>
-          csddddddddddddddddddd
+          DDD
         </span>
       </span>
       <div
