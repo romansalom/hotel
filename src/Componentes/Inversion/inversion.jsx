@@ -5,19 +5,13 @@ import { Input, Textarea } from '@nextui-org/react';
 function Inversion() {
   return (
     <div>
-      <span class="relative flex justify-center bg-white mt-5 mb-10">
-        <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-200"></div>
-
-        <span class="relative z-10 bg-white px-6 " style={{ color: 'white' }}>
-          DDD
-        </span>
-      </span>
       <div
         id="inversion"
         className="  mt-1 flex flex-wrap justify-center items-stretch   "
       >
         {/* Primer componente */}
         <div className="w-full sm:w-1/2 relative flex flex-col justify-center items-center   bg-dark-grays p-4">
+          <h1>titulo</h1>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62093.38941661309!2d-58.27790821623154!3d-35.122144981444315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c90e5d5eea8b%3A0x7224a0457f7205f7!2sVaca%20muerta%20PX!5e0!3m2!1ses-419!2sar!4v1712255687784!5m2!1ses-419!2sar"
             style={{ width: '100%', height: '100%', border: '0' }}
