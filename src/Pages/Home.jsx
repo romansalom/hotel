@@ -13,7 +13,7 @@ function Home() {
   const mensaje = '¡Hola! Estoy interesado.';
 
   return (
-    <div className="App">
+    <div id="App" className="App">
       <NavBar />
       <Headers />
       <br />

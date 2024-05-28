@@ -23,7 +23,7 @@ function Headers() {
   return (
     <div
       id="Header"
-      className="relative w-full bg-dark-gray flex justify-center items-center"
+      className="relative w-full bg-gradient-to-r from-black via-black  to-orange-00 flex justify-center items-center"
     >
       {/* La primera imagen centrada y ajustada al ancho completo */}
       <Image

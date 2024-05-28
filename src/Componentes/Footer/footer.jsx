@@ -3,13 +3,13 @@ import './footer.css'; // Asegúrate de importar tu archivo CSS aquí
 function Footer() {
   return (
     <div className="contenedores-zoom">
-      <footer className=" bg-gradient-to-r from-black via-black  via-bg-dark-gray to-orange-900 py-10 px-10 font-sans tracking-wide">
+      <footer className=" bg-black py-5 px-8 font-sans tracking-wide">
         <div className="max-w-2xl mx-auto text-center">
           <a href="javascript:void(0)" class="inline-block">
-            <img src="copia3.png" alt="logo" class="w-48" />
+            <img src="copia3.png" alt="logo" class="w-40" />
           </a>
 
-          <ul class="flex items-center justify-center flex-wrap gap-y-3 gap-x-6 mt-8">
+          <ul class="flex items-center justify-center flex-wrap gap-y-3 gap-x-6">
             <li>
               <a href="javascript:void(0)">
                 <svg
