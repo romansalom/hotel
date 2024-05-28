@@ -21,7 +21,6 @@ function Home() {
 
       <ImageSection id="imagenes" />
       <Contacto id="contacto" />
-      <Características id="inversion" />
 
       <Footer />
       <div className="whatsapp-float">
