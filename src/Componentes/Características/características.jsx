@@ -4,7 +4,7 @@ import './caracteristicas.css'; // Asegúrate de importar tu archivo CSS aquí
 
 function Características() {
   return (
-    <div id="inversion">
+    <div id="inversion" className="contenedore-zoom">
       <span class="relative flex justify-center bg-white mt-10 mb-5">
         <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-200"></div>
 

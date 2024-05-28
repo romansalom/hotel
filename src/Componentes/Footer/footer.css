@@ -5,3 +5,8 @@
 .bg-light-gray {
     background-color: #ee29293a !important;
 }
+
+.contenedores-zoom {
+    zoom: 100%;
+    /* o transform: scale(0.8); */
+}

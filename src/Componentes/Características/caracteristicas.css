@@ -33,3 +33,8 @@
     height: auto;
     /* Permite que la altura de las imágenes se ajuste automáticamente */
 }
+
+.contenedore-zoom {
+    zoom: 80%;
+    /* o transform: scale(0.8); */
+}
