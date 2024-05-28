@@ -3,7 +3,7 @@ import { Image } from '@nextui-org/react';
 function Footer() {
   return (
     <footer class="bg-gradient-to-r from-black via-black  via-bg-dark-gray to-orange-900 py-10 px-10 font-sans tracking-wide">
-      <div class="max-w-2xl mx-auto text-center  justify-center">
+      <div class="max-w-2xl mx-auto text-center">
         <a href="javascript:void(0)" class="inline-block">
           <img src="copia3.png" alt="logo" class="w-48" />
         </a>
@@ -112,7 +112,7 @@ function Footer() {
       </div>
 
       <ul class="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 gap-12 mt-10">
-        <li class="flex  justify-center">
+        <li class="flex items-center">
           <div class="bg-white h-10 w-10 rounded-full flex items-center justify-center shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ function Footer() {
             <strong>180-548-2588</strong>
           </a>
         </li>
-        <li class="flex items-center  justify-center">
+        <li class="flex items-center">
           <div class="bg-white h-10 w-10 rounded-full flex items-center justify-center shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@ function Footer() {
             <strong>info@example.com</strong>
           </a>
         </li>
-        <li class="flex  justify-center">
+        <li class="flex items-center">
           <div class="bg-white h-10 w-10 rounded-full flex items-center justify-center shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
