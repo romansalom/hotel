@@ -17,7 +17,7 @@ function Características() {
         className="relative w-full  flex flex-col justify-center items-center py-10"
       >
         {/* Titulo con tamaño y alineación responsiva */}
-        <h1 className="text-black text-2xl md:text-3xl lg:text-4xl text-center mb-20 font-extrabold ">
+        <h1 className="font-[sans-serif]  text-black text-3xl md:text-3xl lg:text-3xl text-center mb-20 font-extrabold ">
           Características de la inversión
         </h1>
 

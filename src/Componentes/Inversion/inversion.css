@@ -6,7 +6,7 @@
     background-color: #00000025 !important;
 }
 
-.contenedor-zoom {
-    zoom: 100%;
+.contenedores1-zoom {
+    zoom: 80%;
     /* o transform: scale(0.8); */
 }

@@ -4,12 +4,12 @@ import { Input, Textarea } from '@nextui-org/react';
 
 function Contacto() {
   return (
-    <div id="contacto" className=" ">
+    <div id="contacto" className="contenedores1-zoom">
       <br></br>
       <br></br>
       <div class="grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-10 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white text-[#333] my-6 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-orange-600 before:h-full max-md:before:hidden">
         <div>
-          <h2 class="text-3xl font-extrabold">Ponte en contacto</h2>
+          <h2 className="text-3xl font-extrabold">Ponte en contacto</h2>
           <p class="text-sm text-gray-400 mt-3">
             ¿Tienes una consulta específica o estás buscando explorar nuevas
             oportunidades? Nuestro equipo experimentado está listo para
