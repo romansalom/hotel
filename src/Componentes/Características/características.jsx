@@ -4,8 +4,8 @@ import './caracteristicas.css'; // Asegúrate de importar tu archivo CSS aquí
 
 function Características() {
   return (
-    <div>
-      <span class="relative flex justify-center bg-white mt-10 ">
+    <div id="inversion">
+      <span class="relative flex justify-center bg-white mt-10 mb-10">
         <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-200"></div>
 
         <span class="relative z-10 bg-white px-6 " style={{ color: 'white' }}>

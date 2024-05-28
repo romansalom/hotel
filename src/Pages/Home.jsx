@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../Componentes/NavBar/NavBar';
 import Headers from '../Componentes/Header/header';
 import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
-import Inversion from '../Componentes/Inversion/inversion';
+import Contacto from '../Componentes/Inversion/inversion';
 import ImageSection from '../Componentes/ImageSection/imageSection';
 import Características from '../Componentes/Características/características';
 import Banner from '../Componentes/Banner/banner';
@@ -20,9 +20,9 @@ function Home() {
       <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
       <ImageSection id="imagenes" />
-      <Inversion id="inversion" />
-      <Características />
-      <Banner />
+      <Contacto id="contacto" />
+      <Características id="inversion" />
+
       <Footer />
       <div className="whatsapp-float">
         <a

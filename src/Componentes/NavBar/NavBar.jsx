@@ -13,6 +13,14 @@ import './navBAR.css';
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const handleScrollToComponentcontacto = () => {
+    const component = document.getElementById('contacto');
+    if (component) {
+      setIsMenuOpen(false);
+      component.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleScrollToComponent = () => {
     const component = document.getElementById('responsiveImageTextComponent');
     if (component) {
@@ -34,6 +42,7 @@ export default function App() {
       setIsMenuOpen(false);
     }
   };
+
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
@@ -52,7 +61,7 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-10" justify="center">
         <NavbarItem>
           <Link
             style={{ color: 'white', textDecoration: 'none' }}
@@ -66,17 +75,18 @@ export default function App() {
         <NavbarItem>
           <Link
             style={{ color: 'white', textDecoration: 'none' }}
-            className=" font-bold text-center hover-underline-animation"
+            className="font-bold text-center hover-underline-animation"
+            onClick={handleScrollToComponentimagenes}
           >
-            Proyectos
+            <button onClick={handleScrollToComponentimagenes}>Imagenes</button>
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
             style={{ color: 'white', textDecoration: 'none' }}
-            className="font-bold text-center hover-underline-animation"
+            className=" font-bold text-center hover-underline-animation"
           >
-            <button onClick={handleScrollToComponentimagenes}>Imagenes</button>
+            <button onClick={handleScrollToComponentcontacto}>Contacto</button>
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -87,15 +97,7 @@ export default function App() {
             <button onClick={handleScrollToComponentinversion}>Inverti</button>
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="nosotros"
-            style={{ color: 'white', textDecoration: 'none' }}
-            className=" font-bold text-center hover-underline-animation"
-          >
-            Contacto
-          </Link>
-        </NavbarItem>
+
         {/* Otros elementos de NavbarContent */}
       </NavbarContent>
 
@@ -105,7 +107,7 @@ export default function App() {
             <NavbarItem>
               <Link
                 style={{
-                  color: 'white',
+                  color: 'black',
                   textDecoration: 'none',
                   fontSize: '1.2rem',
                   marginBottom: '0.5rem',
@@ -116,23 +118,11 @@ export default function App() {
                 Condo-Hotel
               </Link>
             </NavbarItem>
+
             <NavbarItem>
               <Link
                 style={{
-                  color: 'white',
-                  textDecoration: 'none',
-                  fontSize: '1.2rem',
-                  marginBottom: '0.5rem',
-                }}
-                className="font-bold text-center hover-underline-animation"
-              >
-                Proyectos
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link
-                style={{
-                  color: 'white',
+                  color: 'black',
                   textDecoration: 'none',
                   fontSize: '1.2rem',
                   marginBottom: '0.5rem',
@@ -146,7 +136,21 @@ export default function App() {
             <NavbarItem>
               <Link
                 style={{
-                  color: 'white',
+                  color: 'black',
+                  textDecoration: 'none',
+                  fontSize: '1.2rem',
+                  marginBottom: '0.5rem',
+                }}
+                className="font-bold text-center hover-underline-animation"
+                onClick={handleScrollToComponentcontacto}
+              >
+                Contacto
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link
+                style={{
+                  color: 'black',
                   textDecoration: 'none',
                   fontSize: '1.2rem',
                   marginBottom: '0.5rem',
@@ -155,20 +159,6 @@ export default function App() {
                 onClick={handleScrollToComponentinversion}
               >
                 Inverti
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link
-                href="nosotros"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none',
-                  fontSize: '1.2rem',
-                  marginBottom: '0.5rem',
-                }}
-                className="font-bold text-center hover-underline-animation"
-              >
-                Contacto
               </Link>
             </NavbarItem>
           </div>
