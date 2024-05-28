@@ -5,7 +5,7 @@ import './caracteristicas.css'; // Asegúrate de importar tu archivo CSS aquí
 function Características() {
   return (
     <div id="inversion">
-      <span class="relative flex justify-center bg-white mt-10 mb-10">
+      <span class="relative flex justify-center bg-white mt-10 mb-5">
         <div class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-orange-600 to-transparent opacity-200"></div>
 
         <span class="relative z-10 bg-white px-6 " style={{ color: 'white' }}>
@@ -17,7 +17,7 @@ function Características() {
         className="relative w-full  flex flex-col justify-center items-center py-10"
       >
         {/* Titulo con tamaño y alineación responsiva */}
-        <h1 className="text-black text-2xl md:text-3xl lg:text-4xl text-center mb-20 ">
+        <h1 className="text-black text-2xl md:text-3xl lg:text-4xl text-center mb-20 font-extrabold ">
           Características de la inversión
         </h1>
 
@@ -26,10 +26,10 @@ function Características() {
           {/* Primer conjunto de imagen y texto */}
           <div className="flex flex-col items-center ">
             <Image src="0-icon (1).png" className="feature-image mb-5" />
-            <h2 className="text-black text-lg lg:text-xl  mb-2">
+            <h2 className="text-black text-lg lg:text-xl font-bold mb-2">
               Renta Espera
             </h2>
-            <p className="text-black text-sm lg:text-base ">
+            <p className="text-black text-sm lg:text-base font-bold ">
               Desde 1/4 de habitación
             </p>
           </div>
@@ -37,10 +37,10 @@ function Características() {
           {/* Segundo conjunto de imagen y texto */}
           <div className="flex flex-col items-center">
             <Image src="0-icon (2).png" className="feature-image mb-5" />
-            <h2 className="text-black text-lg lg:text-xl  mb-2">
+            <h2 className="text-black text-lg lg:text-xl font-bold  mb-2">
               Inversión en Pequeña Escala
             </h2>
-            <p className="text-black text-sm lg:text-base ">
+            <p className="text-black text-sm lg:text-base font-bold ">
               Desde 1/4 de habitación
             </p>
           </div>
@@ -48,10 +48,10 @@ function Características() {
           {/* Tercer conjunto de imagen y texto */}
           <div className="flex flex-col items-center">
             <Image src="0-icon.png" className="feature-image mb-5" />
-            <h2 className="text-black text-lg lg:text-xl  mb-2">
+            <h2 className="text-black text-lg lg:text-xl font-bold  mb-2">
               Inversión en Pequeña Escala
             </h2>
-            <p className="text-black text-sm lg:text-base ">
+            <p className="text-black text-sm lg:text-base font-bold ">
               Desde 1/4 de habitación
             </p>
           </div>

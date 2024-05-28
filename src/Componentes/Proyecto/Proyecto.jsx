@@ -22,17 +22,18 @@ const ResponsiveImageTextComponent = () => {
           </div>
 
           {/* Texto debajo de la imagen */}
-          <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8">
-            <h2 className="text-2xl font-bold ">Título del Texto</h2>
-            <p className="text-lg font-normal ">
+          <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8 ">
+            <h2 className="text-2xl font-extrabold  ">Título del Texto</h2>
+            <br></br>
+            <p className="text-lg font-bold  ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium reprehenderit id dicta veniam aliquam.
             </p>
-            <p className="text-lg font-normal ">
+            <p className="text-lg font-bold ">
               Facilis quaerat animi, aut amet dolores culpa. Ipsa quo explicabo
               illo earum dolore, temporibus sapiente totam.
             </p>
-            <p className="text-lg font-normal">
+            <p className="text-lg font-bold">
               Otro párrafo de texto con un estilo diferente.
             </p>
           </div>
@@ -52,17 +53,18 @@ const ResponsiveImageTextComponent = () => {
             />
           </div>
           {/* Texto debajo de la imagen */}
-          <div className="md:mr-2 lg:mr-2 xl:mr-2 2xl:mr-2 md:order-1 lg:order-1 xl:order-1 2xl:order-1">
-            <h2 className="text-2xl font-bold ">Título del Texto</h2>
-            <p className="text-lg font-normal ">
+          <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8">
+            <h2 className="text-2xl font-extrabold  ">Título del Texto</h2>
+            <br></br>
+            <p className="text-lg font-bold  ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium reprehenderit id dicta veniam aliquam.
             </p>
-            <p className="text-lg font-normal ">
+            <p className="text-lg font-bold ">
               Facilis quaerat animi, aut amet dolores culpa. Ipsa quo explicabo
               illo earum dolore, temporibus sapiente totam.
             </p>
-            <p className="text-lg font-normal">
+            <p className="text-lg font-bold">
               Otro párrafo de texto con un estilo diferente.
             </p>
           </div>
@@ -84,16 +86,17 @@ const ResponsiveImageTextComponent = () => {
 
           {/* Texto debajo de la imagen */}
           <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8">
-            <h2 className="text-2xl font-bold ">Título del Texto</h2>
-            <p className="text-lg font-normal ">
+            <h2 className="text-2xl font-extrabold  ">Título del Texto</h2>
+            <br></br>
+            <p className="text-lg font-bold  ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium reprehenderit id dicta veniam aliquam.
             </p>
-            <p className="text-lg font-normal ">
+            <p className="text-lg font-bold ">
               Facilis quaerat animi, aut amet dolores culpa. Ipsa quo explicabo
               illo earum dolore, temporibus sapiente totam.
             </p>
-            <p className="text-lg font-normal">
+            <p className="text-lg font-bold">
               Otro párrafo de texto con un estilo diferente.
             </p>
           </div>
