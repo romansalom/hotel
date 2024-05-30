@@ -23,10 +23,6 @@ const Navbarx = () => {
   return (
     <header className="flex shadow-md py-4 px-4 sm:px-10 bg-gradient-to-r from-black via-black  to-orange-00 font-sans min-h-[75px] tracking-wide relative z-50">
       <div className="flex flex-wrap items-center gap-4 w-full">
-        <p className="font-bold text-center text-white lg:text-left lg:flex-1">
-          MARCUS GERSHON HOTEL
-        </p>
-
         <div
           id="collapseMenu"
           className={`lg:flex lg:ml-auto ${
@@ -64,7 +60,7 @@ const Navbarx = () => {
             <li className="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                className=" hover-underline-animation text-black block font-[sans-serif] font-extrabold "
+                className="  text-black block font-[sans-serif] font-semibold "
                 onClick={() => scrollToSection('responsiveImageTextComponent')}
               >
                 Condo-Hotel
@@ -73,7 +69,7 @@ const Navbarx = () => {
             <li className="max-lg:border-b max-lg:py-3 px-5">
               <a
                 href="javascript:void(0)"
-                className=" hover-underline-animation text-black block font-[sans-serif] font-extrabold "
+                className="  text-black block font-[sans-serif] font-semibold "
                 onClick={() => scrollToSection('imagenes')}
               >
                 Imagenes
@@ -82,7 +78,7 @@ const Navbarx = () => {
             <li className="max-lg:border-b max-lg:py-3 px-5">
               <a
                 href="javascript:void(0)"
-                className=" hover-underline-animation text-black block font-[sans-serif] font-extrabold "
+                className="  text-black block font-[sans-serif] font-semibold "
                 onClick={() => scrollToSection('contacto')}
               >
                 Contacto
