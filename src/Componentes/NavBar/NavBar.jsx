@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './navBAR.css';
-import { Navbar } from '@nextui-org/react';
 const Navbarx = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
