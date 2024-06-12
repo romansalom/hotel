@@ -11,11 +11,11 @@ function BannnerSuscribe({ onClose }) {
         </div>
         <div className="text-center">
           <div className="font-semibold text-xl pb-2">
-            Bleibe auf dem Laufenden
+            Suscríbete para mantenerte informado
           </div>
           <p className="text-sm leading-6">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt.
+            Ingresa tu correo electrónico para recibir actualizaciones
+            exclusivas y promociones especiales. ¡No te pierdas nada!
           </p>
         </div>
         <div className="w-full">
@@ -27,14 +27,14 @@ function BannnerSuscribe({ onClose }) {
                 name="email"
                 required
                 className="w-full bg-transparent border-2 rounded-full py-2 px-4 text-sm leading-5 placeholder:text-white text-white"
-                placeholder="E-mail Address"
+                placeholder="E-mail "
               />
             </div>
             <button
               type="submit"
               className="w-full max-w-[160px] mx-auto rounded-full bg-white text-black py-2"
             >
-              <span className="text-teal-900 font-semibold">Subscribe</span>
+              <span className="text-teal-900 font-semibold">Suscríbete </span>
             </button>
           </form>
         </div>
