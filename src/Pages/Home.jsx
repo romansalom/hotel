@@ -9,9 +9,11 @@ import Banner from '../Componentes/Banner/banner';
 import Footer from '../Componentes/Footer/footer';
 import './home.css';
 import SeccionBlanca from '../Componentes/NavBar/seccionBlanca';
+import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
   const mensaje = '¡Hola! Estoy interesado.';
 
   useEffect(() => {
@@ -40,9 +42,15 @@ function Home() {
     };
   }, []); // Solo se ejecuta una vez, después de montar el componente
 
+  const handleClose = () => {
+    setShowBanner(false); // Ocultar el banner al hacer clic en la "x".
+  };
+
   return (
     <div id="App" className="App">
+      {showBanner && <BannnerSuscribe onClose={handleClose} />}
       <Headers />
+
       {/* Agregamos el NavBar aquí, si es parte del header */}
       {/* Contenido de la primera sección */}
       <div id="separador">
