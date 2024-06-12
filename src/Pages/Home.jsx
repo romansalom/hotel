@@ -10,6 +10,7 @@ import Footer from '../Componentes/Footer/footer';
 import './home.css';
 import SeccionBlanca from '../Componentes/NavBar/seccionBlanca';
 import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
+import VideoBackground from '../Componentes/BannerVideo/bannerVideo';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -55,6 +56,7 @@ function Home() {
       {/* Contenido de la primera sección */}
       <div id="separador">
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
+        <VideoBackground></VideoBackground>
         <ImageSection id="imagenes" />
         <Contacto id="contacto" />
         <Footer />

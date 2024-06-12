@@ -15,7 +15,7 @@ function BannnerSuscribe({ onClose }) {
           </div>
           <p className="text-sm leading-6">
             Ingresa tu correo electrónico para recibir actualizaciones
-            exclusivas y promociones especiales. ¡No te pierdas nada!
+            exclusivas y promociones especiales.
           </p>
         </div>
         <div className="w-full">

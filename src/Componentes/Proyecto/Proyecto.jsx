@@ -3,7 +3,7 @@ import { Image } from '@nextui-org/react';
 import './proyecto.css';
 const ResponsiveImageTextComponent = () => {
   return (
-    <div className="contenedor-zoom">
+    <div className="contenedores">
       <div
         id="responsiveImageTextComponent"
         className="container mx-auto p-4 mb-8"
