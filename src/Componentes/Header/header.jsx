@@ -21,13 +21,10 @@ function Headers() {
   }, []);
 */
   return (
-    <div
-      id="Header"
-      className="relative w-full bg-gradient-to-r from-black via-black  to-orange-00 flex justify-center items-center"
-    >
+    <div id="Header" className="fondoheader ">
       {/* La primera imagen centrada y ajustada al ancho completo */}
       <Image
-        src="46413055_transparent-2.png"
+        src="logoblanco.png"
         className="w-full h-screen object-contain"
         alt="Banner Principal"
         style={{ marginTop: '-4rem' }} // Ajusta el margen superior para acercar la imagen al Navbar

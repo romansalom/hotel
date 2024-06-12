@@ -5,3 +5,29 @@
 .bg-light-gray {
     background-color: #c4c1c1 !important;
 }
+
+#Header {
+    /* Asegúrate de que el contenedor Header ocupe toda la altura de la pantalla */
+    height: 100vh;
+    overflow: hidden;
+    /* Oculta cualquier contenido que se desborde del contenedor */
+}
+
+/* Ajusta el estilo de la imagen para que llene el contenedor */
+.Image {
+    height: 100%;
+    /* Establece la altura de la imagen al 100% del contenedor */
+    object-fit: cover;
+    /* Asegúrate de que la imagen cubra todo el espacio sin distorsionarse */
+}
+
+.fondoheader {
+    /* Actualiza el gradiente para usar el color #F2D6A2 */
+    background: linear-gradient(to right, #404040, #F2D6A2);
+    /* Resto de tus estilos */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

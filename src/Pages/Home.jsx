@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../Componentes/NavBar/seccionBlanca';
 import Headers from '../Componentes/Header/header';
 import ResponsiveImageTextComponent from '../Componentes/Proyecto/Proyecto';
@@ -11,30 +11,62 @@ import './home.css';
 import SeccionBlanca from '../Componentes/NavBar/seccionBlanca';
 
 function Home() {
+  const [showLogo, setShowLogo] = useState(false);
   const mensaje = '¡Hola! Estoy interesado.';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Obtén el elemento de la sección separador
+      const separadorSection = document.getElementById('separador');
+
+      if (separadorSection) {
+        // Obtén las dimensiones y posición de la sección separador
+        const rect = separadorSection.getBoundingClientRect();
+
+        // Calcula si la sección está visible en la ventana
+        const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        // Actualiza el estado de visibilidad del logo basado en la visibilidad de la sección separador
+        setShowLogo(isVisible);
+      }
+    };
+
+    // Añade el event listener para el scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpia el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Solo se ejecuta una vez, después de montar el componente
 
   return (
     <div id="App" className="App">
       <Headers />
-      <SeccionBlanca /> {/* Agregamos el NavBar aquí, si es parte del header */}
+      {/* Agregamos el NavBar aquí, si es parte del header */}
       {/* Contenido de la primera sección */}
-      <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
-      {/* Resto del contenido */}
-      <ImageSection id="imagenes" />
-      <Contacto id="contacto" />
-      <Footer />
-      {/* Botón de WhatsApp flotante */}
-      <div className="whatsapp-float">
-        <a
-          href={`https://wa.me/+5491164339338?text=${encodeURIComponent(
-            mensaje
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-whatsapp"></i>
-        </a>
+      <div id="separador">
+        <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
+        <ImageSection id="imagenes" />
+        <Contacto id="contacto" />
+        <Footer />
       </div>
+      {/* Resto del contenido */}
+
+      {/* Logo flotante, visible solo si showLogo es true */}
+      {showLogo && (
+        <div className="whatsapp-float">
+          <a
+            href={`https://wa.me/+5491164339338?text=${encodeURIComponent(
+              mensaje
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      )}
     </div>
   );
 }
