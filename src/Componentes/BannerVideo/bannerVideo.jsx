@@ -1,45 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import './VideoBackground.css';
+import React from 'react';
+import './VideoBackground.css'; // Asegúrate de tener este archivo CSS
 
 const VideoBackground = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Función para detectar si el usuario está en un dispositivo móvil
-    const checkMobile = () => {
-      const match = window.matchMedia || window.msMatchMedia;
-      if (match) {
-        const mq = match('(pointer:coarse)');
-        setIsMobile(!!mq.matches);
-      }
-    };
-
-    // Ejecutar la función al cargar el componente
-    checkMobile();
-
-    // Agregar listener para cambios de tamaño de pantalla
-    window.addEventListener('resize', checkMobile);
-
-    // Limpiar el listener al desmontar el componente
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, []);
-
   return (
     <div className="video-background-container">
       <video
+        autoPlay
         loop
         muted
+        playsInline // Esto evita que el video se abra en pantalla completa en iOS
         className="video-background"
-        autoPlay={!isMobile} // Desactiva autoplay en dispositivos móviles
-        controls={isMobile} // Muestra controles en dispositivos móviles
       >
         <source src="videoBanner.mp4" type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
       <div className="video-overlay">
-        <h1>Tu camino hacia la libertad financiera</h1>
         <button className="cta-button">SÉ EXCLUSIVO</button>
       </div>
     </div>
