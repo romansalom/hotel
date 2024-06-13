@@ -11,7 +11,7 @@
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .video-background-container {
-        height: 30vh;
+        height: 20vh;
         /* Altura para dispositivos móviles */
     }
 }
