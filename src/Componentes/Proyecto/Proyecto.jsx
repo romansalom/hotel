@@ -19,8 +19,6 @@ const ResponsiveImageTextComponent = () => {
   const [isLoading2, setIsLoading2] = useState(true);
   const [isLoading3, setIsLoading3] = useState(true);
 
-  const [allImagesLoaded, setAllImagesLoaded] = useState(false); // State to track all images loaded
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -29,30 +27,30 @@ const ResponsiveImageTextComponent = () => {
     });
 
     // Preload all images
-    const preloadImages = (
-      imagesArray,
-      setIsLoadingFunction,
-      setIsVisibleFunction
-    ) => {
-      let loadedCount = 0;
-      imagesArray.forEach((src) => {
+    const preloadImages = () => {
+      images.forEach((src) => {
         const img = new window.Image();
-        img.onload = () => {
-          loadedCount++;
-          if (loadedCount === imagesArray.length) {
-            setIsLoadingFunction(false);
-            setIsVisibleFunction(true);
-            setAllImagesLoaded(true); // Update state when all images are loaded
-          }
-        };
         img.src = src;
       });
     };
-
-    preloadImages(images, setIsLoading, setIsVisible);
-    preloadImages(images2, setIsLoading2, setIsVisible2);
-    preloadImages(images3, setIsLoading3, setIsVisible3);
+    const preloadImages2 = () => {
+      images2.forEach((src) => {
+        const img2 = new window.Image();
+        img2.src = src;
+      });
+    };
+    const preloadImages3 = () => {
+      images3.forEach((src) => {
+        const img3 = new window.Image();
+        img3.src = src;
+      });
+    };
+    preloadImages();
+    preloadImages2();
+    preloadImages3();
   }, [images, images2, images3]);
+
+  // Handle image load to update state
   const handleImageLoad = () => {
     setIsLoading(false);
     setIsVisible(true); // Make the new image visible after load
@@ -65,6 +63,7 @@ const ResponsiveImageTextComponent = () => {
     setIsLoading3(false);
     setIsVisible3(true); // Make the new image visible after load
   };
+
   // Handle image click to change to the next image
   const handleImageClick = (e) => {
     e.preventDefault();
@@ -91,10 +90,6 @@ const ResponsiveImageTextComponent = () => {
     }, 500); // Wait for the fade-out transition to complete
   };
 
-  // Render content only when all images are loaded
-  if (!allImagesLoaded) {
-    return null; // Or render a loading indicator
-  }
   return (
     <div className="contenedores">
       <div
