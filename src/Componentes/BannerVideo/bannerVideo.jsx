@@ -12,7 +12,7 @@ const VideoBackground = () => {
   useEffect(() => {
     const textChangeInterval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % buttonTexts.length);
-    }, 3000); // Cambia el texto cada 3000ms (3 segundos)
+    }, 2000); // Cambia el texto cada 3000ms (3 segundos)
 
     // Limpiar el intervalo cuando el componente se desmonte
     return () => clearInterval(textChangeInterval);
