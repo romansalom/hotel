@@ -1,4 +1,83 @@
 .contenedores {
-    zoom: 100%;
+    zoom: 80%;
     /* o transform: scale(0.8); */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    /* Aplicar borde redondeado a las imágenes */
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    /* Transición suave para el cambio de imagen */
+}
+
+/* Clases para manejar la visibilidad con la transición */
+.image-hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    /* Pequeña reducción durante la transición de desaparición */
+}
+
+.image-visible {
+    opacity: 1;
+    transform: scale(1);
+    /* Escala original cuando es visible */
+}
+
+/* Clases de transición adicional para los efectos de hover */
+.image-container:hover img {
+    transform: scale(1.00);
+    /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+/* Otros estilos generales */
+.contenedores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#responsiveImageTextComponent {
+    max-width: 1200px;
+    /* Ajusta el ancho máximo para contener todos los elementos */
+    margin: auto;
+}
+
+.font-[sans-serif] {
+    font-family: 'Sans-serif', Arial, Helvetica, sans-serif;
+}
+
+.text-2xl {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.text-lg {
+    font-size: 1.125em;
+    margin: 5px 0;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
 }
