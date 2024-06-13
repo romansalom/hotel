@@ -101,14 +101,14 @@ const ResponsiveImageTextComponent = () => {
         <br />
         {/* Primer bloque de contenido */}
         <div
-          className="flex flex-col md:flex-row items-center justify-center"
+          className=" flex flex-col md:flex-row items-center justify-center"
           data-aos="fade-up"
         >
-          <div className="md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5  relative mb-4 md:mb-0 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
-            <div
-              className="image-container"
-              onClick={(e) => handleImageClick(e)}
-            >
+          <div
+            className=" md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5  relative mb-4 md:mb-0 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out "
+            onClick={(e) => handleImageClick(e)}
+          >
+            <div className="image-container">
               <img
                 src={images[currentIndex]}
                 alt={`Imagen ${currentIndex + 1}`}
@@ -145,11 +145,11 @@ const ResponsiveImageTextComponent = () => {
           className="flex flex-col md:flex-row items-center justify-center font-[sans-serif]"
           data-aos="fade-up"
         >
-          <div className="md:ml-2 lg:ml-2 xl:ml-2 2xl:ml-2 relative mb-4 md:mb-0 md:order-2 lg:order-2 xl:order-2 2xl:order-2 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
-            <div
-              className="image-container"
-              onClick={(e) => handleImageClick2(e)}
-            >
+          <div
+            className="md:ml-2 lg:ml-2 xl:ml-2 2xl:ml-2 relative mb-4 md:mb-0 md:order-2 lg:order-2 xl:order-2 2xl:order-2 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
+            onClick={(e) => handleImageClick2(e)}
+          >
+            <div className="image-container">
               <img
                 src={images2[(currentIndex2 + 1) % images2.length]}
                 alt={`Imagen ${currentIndex2 + 2}`}
@@ -186,11 +186,11 @@ const ResponsiveImageTextComponent = () => {
           className="flex flex-col md:flex-row items-center justify-center"
           data-aos="fade-up"
         >
-          <div className="md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5  relative mb-4 md:mb-0 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
-            <div
-              className="image-container"
-              onClick={(e) => handleImageClick3(e)}
-            >
+          <div
+            className="md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5  relative mb-4 md:mb-0 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
+            onClick={(e) => handleImageClick3(e)}
+          >
+            <div className="image-container">
               <img
                 src={images3[currentIndex3]}
                 alt={`Imagen ${currentIndex3 + 1}`}
