@@ -9,7 +9,7 @@
     object-fit: cover;
     border-radius: 30px;
     /* Aplicar borde redondeado a las imágenes */
-    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    transition: opacity 1.5s ease-in-out, transform 2.3s ease-in-out;
     /* Transición suave para el cambio de imagen */
 }
 
