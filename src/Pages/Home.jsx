@@ -56,8 +56,9 @@ function Home() {
       {/* Contenido de la primera sección */}
       <div id="separador">
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
-        <VideoBackground></VideoBackground>
         <ImageSection id="imagenes" />
+        <VideoBackground></VideoBackground>
+
         <Contacto id="contacto" />
         <Footer />
       </div>

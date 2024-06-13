@@ -1,21 +1,33 @@
-import React from 'react';
-import './VideoBackground.css'; // Asegúrate de tener este archivo CSS
+import React, { useState, useEffect } from 'react';
+import './VideoBackground.css';
 
 const VideoBackground = () => {
+  // Array de textos para rotar en el botón
+  const buttonTexts = ['SÉ EXCLUSIVO', 'ÚNETE HOY', 'DESCUBRE MÁS'];
+
+  // Estado para el texto actual del botón
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  // useEffect para cambiar el texto cada 3 segundos
+  useEffect(() => {
+    const textChangeInterval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % buttonTexts.length);
+    }, 3000); // Cambia el texto cada 3000ms (3 segundos)
+
+    // Limpiar el intervalo cuando el componente se desmonte
+    return () => clearInterval(textChangeInterval);
+  }, [buttonTexts.length]);
+
   return (
     <div className="video-background-container">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline // Esto evita que el video se abra en pantalla completa en iOS
-        className="video-background"
-      >
+      <video autoPlay loop muted playsInline className="video-background">
         <source src="videoBanner.mp4" type="video/mp4" />
+        <source src="videoBanner.webm" type="video/webm" />
         Tu navegador no soporta videos.
       </video>
+
       <div className="video-overlay">
-        <button className="cta-button">SÉ EXCLUSIVO</button>
+        <button className="cta-button">{buttonTexts[currentTextIndex]}</button>
       </div>
     </div>
   );
