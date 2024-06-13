@@ -16,6 +16,10 @@ const ResponsiveImageTextComponent = () => {
   const [isVisible2, setIsVisible2] = useState(true);
   const [isVisible3, setIsVisible3] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoading2, setIsLoading2] = useState(true);
+  const [isLoading3, setIsLoading3] = useState(true);
+
+  const [allImagesLoaded, setAllImagesLoaded] = useState(false); // State to track all images loaded
 
   useEffect(() => {
     AOS.init({
@@ -25,43 +29,42 @@ const ResponsiveImageTextComponent = () => {
     });
 
     // Preload all images
-    const preloadImages = () => {
-      images.forEach((src) => {
+    const preloadImages = (
+      imagesArray,
+      setIsLoadingFunction,
+      setIsVisibleFunction
+    ) => {
+      let loadedCount = 0;
+      imagesArray.forEach((src) => {
         const img = new window.Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === imagesArray.length) {
+            setIsLoadingFunction(false);
+            setIsVisibleFunction(true);
+            setAllImagesLoaded(true); // Update state when all images are loaded
+          }
+        };
         img.src = src;
       });
     };
-    const preloadImages2 = () => {
-      images2.forEach((src) => {
-        const img2 = new window.Image();
-        img2.src = src;
-      });
-    };
-    const preloadImages3 = () => {
-      images3.forEach((src) => {
-        const img3 = new window.Image();
-        img3.src = src;
-      });
-    };
-    preloadImages();
-    preloadImages2();
-    preloadImages3();
-  }, [images, images2, images3]);
 
-  // Handle image load to update state
+    preloadImages(images, setIsLoading, setIsVisible);
+    preloadImages(images2, setIsLoading2, setIsVisible2);
+    preloadImages(images3, setIsLoading3, setIsVisible3);
+  }, [images, images2, images3]);
   const handleImageLoad = () => {
     setIsLoading(false);
     setIsVisible(true); // Make the new image visible after load
   };
   const handleImageLoad2 = () => {
-    setIsLoading(false);
+    setIsLoading2(false);
     setIsVisible2(true); // Make the new image visible after load
   };
   const handleImageLoad3 = () => {
-    setIsLoading(false);
+    setIsLoading3(false);
     setIsVisible3(true); // Make the new image visible after load
   };
-
   // Handle image click to change to the next image
   const handleImageClick = (e) => {
     e.preventDefault();
@@ -76,7 +79,7 @@ const ResponsiveImageTextComponent = () => {
     setIsVisible2(false); // Start the transition
     setTimeout(() => {
       setCurrentIndex2((prevIndex) => (prevIndex + 1) % images2.length);
-      setIsLoading(true); // Prepare to load the new image
+      setIsLoading2(true); // Prepare to load the new image
     }, 500); // Wait for the fade-out transition to complete
   };
   const handleImageClick3 = (e) => {
@@ -84,10 +87,14 @@ const ResponsiveImageTextComponent = () => {
     setIsVisible3(false); // Start the transition
     setTimeout(() => {
       setCurrentIndex3((prevIndex) => (prevIndex + 1) % images3.length);
-      setIsLoading(true); // Prepare to load the new image
+      setIsLoading3(true); // Prepare to load the new image
     }, 500); // Wait for the fade-out transition to complete
   };
 
+  // Render content only when all images are loaded
+  if (!allImagesLoaded) {
+    return null; // Or render a loading indicator
+  }
   return (
     <div className="contenedores">
       <div
@@ -155,7 +162,7 @@ const ResponsiveImageTextComponent = () => {
                   isVisible2 ? 'image-visible' : 'image-hidden'
                 }`}
                 onLoad={handleImageLoad2}
-                style={{ display: isLoading ? 'none' : 'block' }}
+                style={{ display: isLoading2 ? 'none' : 'block' }}
               />
             </div>
           </div>
@@ -196,7 +203,7 @@ const ResponsiveImageTextComponent = () => {
                   isVisible3 ? 'image-visible' : 'image-hidden'
                 }`}
                 onLoad={handleImageLoad3}
-                style={{ display: isLoading ? 'none' : 'block' }}
+                style={{ display: isLoading3 ? 'none' : 'block' }}
               />
             </div>
           </div>
