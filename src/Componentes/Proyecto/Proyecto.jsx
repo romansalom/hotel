@@ -116,7 +116,6 @@ const ResponsiveImageTextComponent = () => {
                   isVisible ? 'image-visible' : 'image-hidden'
                 }`}
                 onLoad={handleImageLoad}
-                style={{ display: isLoading ? 'none' : 'block' }}
               />
             </div>
           </div>
@@ -157,7 +156,6 @@ const ResponsiveImageTextComponent = () => {
                   isVisible2 ? 'image-visible' : 'image-hidden'
                 }`}
                 onLoad={handleImageLoad2}
-                style={{ display: isLoading2 ? 'none' : 'block' }}
               />
             </div>
           </div>
@@ -198,7 +196,6 @@ const ResponsiveImageTextComponent = () => {
                   isVisible3 ? 'image-visible' : 'image-hidden'
                 }`}
                 onLoad={handleImageLoad3}
-                style={{ display: isLoading3 ? 'none' : 'block' }}
               />
             </div>
           </div>
