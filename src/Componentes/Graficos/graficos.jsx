@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
-import { useInView } from 'react-intersection-observer';
 import 'intersection-observer';
 import './investmentComparisonChart.css';
 import {
@@ -27,10 +26,6 @@ ChartJS.register(
 const InvestmentComparisonChart = () => {
   const [chartData, setChartData] = useState(null);
   const [animationKey, setAnimationKey] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false); // Controlar si la animación inicial ha ocurrido
-  const { ref, inView } = useInView({
-    threshold: 1,
-  });
 
   const data = {
     labels: Array.from({ length: 30 }, (_, i) => i + 1),
@@ -45,6 +40,8 @@ const InvestmentComparisonChart = () => {
         fill: false,
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgba(255, 99, 132, 0.2)',
+        borderWidth: 6, // Aumentar el grosor de la línea
+        tension: 0.4, // Curvar la línea para un efecto parabólico
       },
       {
         label: 'Inversión B',
@@ -56,23 +53,22 @@ const InvestmentComparisonChart = () => {
         fill: false,
         backgroundColor: 'rgb(54, 162, 235)',
         borderColor: 'rgba(54, 162, 235, 0.2)',
+        borderWidth: 6, // Aumentar el grosor de la línea
+        tension: 0.4, // Curvar la línea para un efecto parabólico
       },
     ],
   };
 
   useEffect(() => {
-    if (inView && !hasAnimated) {
-      setChartData(data);
-      setAnimationKey((prevKey) => prevKey + 1);
-      setHasAnimated(true); // Marca la animación como completada
-    }
-  }, [inView, hasAnimated]);
+    // Cargar los datos del gráfico al iniciar
+    setChartData(data);
+  }, []);
 
   const handleRepeatAnimation = () => {
     setAnimationKey((prevKey) => prevKey + 1); // Incrementa la clave para reiniciar la animación
   };
 
-  const totalDuration = 10000;
+  const totalDuration = 3000; // Duración más rápida para la animación
   const delayBetweenPoints = totalDuration / data.labels.length;
   const previousY = (ctx) =>
     ctx.index === 0
@@ -85,7 +81,7 @@ const InvestmentComparisonChart = () => {
     animation: {
       x: {
         type: 'number',
-        easing: 'linear',
+        easing: 'easeInOutQuad',
         duration: delayBetweenPoints,
         from: NaN,
         delay(ctx) {
@@ -98,7 +94,7 @@ const InvestmentComparisonChart = () => {
       },
       y: {
         type: 'number',
-        easing: 'linear',
+        easing: 'easeInOutQuad',
         duration: delayBetweenPoints,
         from: previousY,
         delay(ctx) {
@@ -134,7 +130,7 @@ const InvestmentComparisonChart = () => {
   return (
     <div>
       <br />
-      <div ref={ref} className="chart-container">
+      <div className="chart-container">
         <h2 className="chart-title">Comparación de Inversiones</h2>
         <p className="chart-description">
           Aquí puedes ver una comparación entre las inversiones A y B en los
