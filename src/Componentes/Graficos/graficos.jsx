@@ -26,10 +26,12 @@ ChartJS.register(
 
 const InvestmentComparisonChart = () => {
   const [chartData, setChartData] = useState(null);
-  const [animationKey, setAnimationKey] = useState(0); // Estado para controlar la clave de animación
+  const [animationKey, setAnimationKey] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false); // Controlar si la animación inicial ha ocurrido
   const { ref, inView } = useInView({
     threshold: 1,
   });
+
   const data = {
     labels: Array.from({ length: 30 }, (_, i) => i + 1),
     datasets: [
@@ -59,11 +61,17 @@ const InvestmentComparisonChart = () => {
   };
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !hasAnimated) {
       setChartData(data);
-      setAnimationKey((prevKey) => prevKey + 1); // Incrementa la clave para reiniciar la animación
+      setAnimationKey((prevKey) => prevKey + 1);
+      setHasAnimated(true); // Marca la animación como completada
     }
-  }, [inView]);
+  }, [inView, hasAnimated]);
+
+  const handleRepeatAnimation = () => {
+    setAnimationKey((prevKey) => prevKey + 1); // Incrementa la clave para reiniciar la animación
+  };
+
   const totalDuration = 10000;
   const delayBetweenPoints = totalDuration / data.labels.length;
   const previousY = (ctx) =>
@@ -79,7 +87,7 @@ const InvestmentComparisonChart = () => {
         type: 'number',
         easing: 'linear',
         duration: delayBetweenPoints,
-        from: NaN, // the point is initially skipped
+        from: NaN,
         delay(ctx) {
           if (ctx.type !== 'data' || ctx.xStarted) {
             return 0;
@@ -106,6 +114,14 @@ const InvestmentComparisonChart = () => {
       intersect: false,
     },
     plugins: {
+      tooltip: {
+        enabled: true,
+        callbacks: {
+          label: function (tooltipItem) {
+            return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`;
+          },
+        },
+      },
       legend: false,
     },
     scales: {
@@ -117,14 +133,35 @@ const InvestmentComparisonChart = () => {
 
   return (
     <div>
-      <br></br>
+      <br />
       <div ref={ref} className="chart-container">
         <h2 className="chart-title">Comparación de Inversiones</h2>
         <p className="chart-description">
           Aquí puedes ver una comparación entre las inversiones A y B en los
           últimos 30 años.
         </p>
-        {chartData && <Line data={chartData} options={chartOptions} />}
+        {chartData && (
+          <Line key={animationKey} data={chartData} options={chartOptions} />
+        )}
+        <button onClick={handleRepeatAnimation} className="repeat-button">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m16 10 3-3m0 0-3-3m3 3H5v3m3 4-3 3m0 0 3 3m-3-3h14v-3"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );
