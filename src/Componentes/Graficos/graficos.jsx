@@ -38,10 +38,12 @@ const InvestmentComparisonChart = () => {
           5900, 6100, 1900, 6500, 6700, 6900, 4100, 7300,
         ],
         fill: false,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgba(255, 99, 132, 0.2)',
-        borderWidth: 6, // Aumentar el grosor de la línea
-        tension: 0.4, // Curvar la línea para un efecto parabólico
+        backgroundColor: 'rgba(0, 0, 0, 0.2)', // Fondo negro con transparencia
+        borderColor: 'rgb(0, 0, 0)',
+        borderWidth: 5, // Aumentar el grosor de la línea
+        tension: 0.3,
+        pointRadius: 0, // Tamaño de los puntos (0 para eliminarlos)
+        pointHoverRadius: 0, // Curvar la línea para un efecto parabólico
       },
       {
         label: 'Inversión B',
@@ -51,10 +53,12 @@ const InvestmentComparisonChart = () => {
           6400, 6600, 6800, 4800, 7200, 7400, 7600, 7800,
         ],
         fill: false,
-        backgroundColor: 'rgb(54, 162, 235)',
-        borderColor: 'rgba(54, 162, 235, 0.2)',
+        backgroundColor: 'rgba(255, 215, 0, 0.2)', // Fondo dorado con transparencia
+        borderColor: 'rgb(255, 215, 0)', // Borde dorado
         borderWidth: 6, // Aumentar el grosor de la línea
-        tension: 0.4, // Curvar la línea para un efecto parabólico
+        tension: 0.4,
+        pointRadius: 0, // Tamaño de los puntos (0 para eliminarlos)
+        pointHoverRadius: 0, // Curvar la línea para un efecto parabólico
       },
     ],
   };
@@ -132,13 +136,6 @@ const InvestmentComparisonChart = () => {
       <br />
       <div className="chart-container">
         <h2 className="chart-title">Comparación de Inversiones</h2>
-        <p className="chart-description">
-          Aquí puedes ver una comparación entre las inversiones A y B en los
-          últimos 30 años.
-        </p>
-        {chartData && (
-          <Line key={animationKey} data={chartData} options={chartOptions} />
-        )}
         <button onClick={handleRepeatAnimation} className="repeat-button">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
@@ -158,6 +155,14 @@ const InvestmentComparisonChart = () => {
             />
           </svg>
         </button>
+        <p className="chart-description">
+          Aquí puedes ver una comparación entre las inversiones A y B en los
+          últimos 30 años.
+        </p>
+
+        {chartData && (
+          <Line key={animationKey} data={chartData} options={chartOptions} />
+        )}
       </div>
     </div>
   );
