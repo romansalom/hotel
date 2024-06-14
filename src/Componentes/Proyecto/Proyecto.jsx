@@ -179,6 +179,9 @@ const ResponsiveImageTextComponent = () => {
         <br />
         <br />
         <br />
+
+        <br />
+        <br />
         <br />
         {/* Segundo bloque de contenido */}
         <div
@@ -219,7 +222,7 @@ const ResponsiveImageTextComponent = () => {
         <br />
         <br />
         <br />
-        <br />
+
         {/* Tercer bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-center justify-center"
@@ -257,6 +260,8 @@ const ResponsiveImageTextComponent = () => {
           </div>
         </div>
       </div>
+      <br />
+      <br />
       <br />
       <br />
       <br />

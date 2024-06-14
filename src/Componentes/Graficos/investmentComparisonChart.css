@@ -1,0 +1,26 @@
+/* investmentComparisonChart.css */
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.chart-description {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #666;
+}

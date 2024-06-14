@@ -11,6 +11,7 @@ import './home.css';
 import SeccionBlanca from '../Componentes/NavBar/seccionBlanca';
 import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
 import VideoBackground from '../Componentes/BannerVideo/bannerVideo';
+import InvestmentComparisonChart from '../Componentes/Graficos/graficos';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -59,6 +60,7 @@ function Home() {
 
         <VideoBackground></VideoBackground>
 
+        <InvestmentComparisonChart></InvestmentComparisonChart>
         <Contacto id="contacto" />
       </div>
       {/* Resto del contenido */}
