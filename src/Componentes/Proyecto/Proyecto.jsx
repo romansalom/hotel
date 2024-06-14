@@ -4,9 +4,13 @@ import 'aos/dist/aos.css'; // Importa el archivo de estilos de AOS
 import './proyecto.css';
 
 const ResponsiveImageTextComponent = () => {
-  const [images] = useState(['header.jpg', 'foto5.jpeg', 'foto6.jpg']);
-  const [images2] = useState(['header.jpg', 'foto5.jpeg', 'foto6.jpg']);
-  const [images3] = useState(['header.jpg', 'foto5.jpeg', 'foto6.jpg']);
+  const [images] = useState([
+    'renderExterior1.jpeg',
+    'renderExterior2.jpeg',
+    'renderExterior3.jpeg',
+  ]);
+  const [images2] = useState(['renderinterior1.jpeg', 'renderinterior2.jpeg']);
+  const [images3] = useState(['fotoVaca1.jpg', 'fotoVaca2.jpg', 'ruta1.jpg']);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
@@ -101,11 +105,11 @@ const ResponsiveImageTextComponent = () => {
         <br />
         {/* Primer bloque de contenido */}
         <div
-          className=" flex flex-col md:flex-row items-center justify-center"
+          className="flex flex-col md:flex-row items-start md:items-center justify-center space-y-4 md:space-y-0 md:space-x-8"
           data-aos="fade-up"
         >
           <div
-            className=" md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5  relative mb-4 md:mb-0 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out "
+            className="relative overflow-hidden rounded-xl hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
             onClick={(e) => handleImageClick(e)}
           >
             <div className="image-container">
@@ -119,22 +123,23 @@ const ResponsiveImageTextComponent = () => {
               />
             </div>
           </div>
-          <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8 font-[sans-serif]">
-            <h2 className="text-2xl font-extrabold">Título del Texto</h2>
+          <div className="flex flex-col justify-center text-center md:text-left md:ml-8 font-[sans-serif]">
+            <h2 className="text-2xl font-extrabold">Render exterior</h2>
             <br />
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium reprehenderit id dicta veniam aliquam.
-            </p>
-            <p className="text-lg">
-              Facilis quaerat animi, aut amet dolores culpa. Ipsa quo explicabo
-              illo earum dolore, temporibus sapiente totam.
-            </p>
-            <p className="text-lg">
-              Otro párrafo de texto con un estilo diferente.
-            </p>
+            <div className="text-lg">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium reprehenderit id dicta veniam aliquam.
+              </p>
+              <p>
+                Facilis quaerat animi, aut amet dolores culpa. Ipsa quo
+                explicabo illo earum dolore, temporibus sapiente totam.
+              </p>
+              <p>Otro párrafo de texto con un estilo diferente.</p>
+            </div>
           </div>
         </div>
+
         <br />
         <br />
         <br />
@@ -145,7 +150,7 @@ const ResponsiveImageTextComponent = () => {
           data-aos="fade-up"
         >
           <div
-            className="md:ml-2 lg:ml-2 xl:ml-2 2xl:ml-2 relative mb-4 md:mb-0 md:order-2 lg:order-2 xl:order-2 2xl:order-2 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
+            className="md:ml-2 lg:ml-2 xl:ml-5 2xl:ml-2 relative mb-4 md:mb-0 md:order-2 lg:order-2 xl:order-2 2xl:order-2 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
             onClick={(e) => handleImageClick2(e)}
           >
             <div className="image-container">
@@ -159,20 +164,20 @@ const ResponsiveImageTextComponent = () => {
               />
             </div>
           </div>
-          <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8 font-[sans-serif]">
-            <h2 className="text-2xl font-extrabold">Título del Texto</h2>
+          <div className="flex flex-col justify-center text-center md:text-left md:ml-8 font-[sans-serif]">
+            <h2 className="text-2xl font-extrabold">Render Interior</h2>
             <br />
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium reprehenderit id dicta veniam aliquam.
-            </p>
-            <p className="text-lg">
-              Facilis quaerat animi, aut amet dolores culpa. Ipsa quo explicabo
-              illo earum dolore, temporibus sapiente totam.
-            </p>
-            <p className="text-lg">
-              Otro párrafo de texto con un estilo diferente.
-            </p>
+            <div className="text-lg">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium reprehenderit id dicta veniam aliquam.
+              </p>
+              <p>
+                Facilis quaerat animi, aut amet dolores culpa. Ipsa quo
+                explicabo illo earum dolore, temporibus sapiente totam.
+              </p>
+              <p>Otro párrafo de texto con un estilo diferente.</p>
+            </div>
           </div>
         </div>
         <br />
@@ -199,20 +204,20 @@ const ResponsiveImageTextComponent = () => {
               />
             </div>
           </div>
-          <div className="md:ml-8 lg:ml-8 xl:ml-8 2xl:ml-8 font-[sans-serif]">
-            <h2 className="text-2xl font-extrabold">Título del Texto</h2>
+          <div className="flex flex-col justify-center text-center md:text-left md:ml-8 font-[sans-serif]">
+            <h2 className="text-2xl font-extrabold">Añelo, Nequen </h2>
             <br />
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium reprehenderit id dicta veniam aliquam.
-            </p>
-            <p className="text-lg">
-              Facilis quaerat animi, aut amet dolores culpa. Ipsa quo explicabo
-              illo earum dolore, temporibus sapiente totam.
-            </p>
-            <p className="text-lg">
-              Otro párrafo de texto con un estilo diferente.
-            </p>
+            <div className="text-lg">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium reprehenderit id dicta veniam aliquam.
+              </p>
+              <p>
+                Facilis quaerat animi, aut amet dolores culpa. Ipsa quo
+                explicabo illo earum dolore, temporibus sapiente totam.
+              </p>
+              <p>Otro párrafo de texto con un estilo diferente.</p>
+            </div>
           </div>
         </div>
       </div>
