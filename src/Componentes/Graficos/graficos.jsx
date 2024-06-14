@@ -26,10 +26,10 @@ ChartJS.register(
 
 const InvestmentComparisonChart = () => {
   const [chartData, setChartData] = useState(null);
+  const [animationKey, setAnimationKey] = useState(0); // Estado para controlar la clave de animación
   const { ref, inView } = useInView({
     threshold: 1,
   });
-
   const data = {
     labels: Array.from({ length: 30 }, (_, i) => i + 1),
     datasets: [
@@ -61,9 +61,9 @@ const InvestmentComparisonChart = () => {
   useEffect(() => {
     if (inView) {
       setChartData(data);
+      setAnimationKey((prevKey) => prevKey + 1); // Incrementa la clave para reiniciar la animación
     }
   }, [inView]);
-
   const totalDuration = 10000;
   const delayBetweenPoints = totalDuration / data.labels.length;
   const previousY = (ctx) =>
