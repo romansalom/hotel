@@ -56,11 +56,10 @@ function Home() {
       {/* Contenido de la primera sección */}
       <div id="separador">
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
-        
+
         <VideoBackground></VideoBackground>
 
         <Contacto id="contacto" />
-        
       </div>
       {/* Resto del contenido */}
 
