@@ -11,7 +11,7 @@
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .video-background-container {
-        height: 30vh;
+        height: 25vh;
         /* Altura para dispositivos móviles */
     }
 }
@@ -19,7 +19,7 @@
 /* Estilos para pantallas muy anchas */
 @media (min-width: 1200px) {
     .video-background-container {
-        height: 40vh;
+        height: 30vh;
         /* Reducimos la altura en pantallas grandes */
     }
 }
