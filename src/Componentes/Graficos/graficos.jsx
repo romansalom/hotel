@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import 'intersection-observer';
 import './investmentComparisonChart.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -66,6 +68,7 @@ const InvestmentComparisonChart = () => {
   useEffect(() => {
     // Cargar los datos del gráfico al iniciar
     setChartData(data);
+    AOS.refresh(); // Actualiza AOS después de cargar el gráfico
   }, []);
 
   const handleRepeatAnimation = () => {
@@ -132,10 +135,53 @@ const InvestmentComparisonChart = () => {
   };
 
   return (
-    <div>
-      <br />
-      <div className="chart-container">
-        <h2 className="chart-title">Comparación de Inversiones</h2>
+    <div className="componentesa" data-aos="fade-up">
+      <div className="chart-container" data-aos="fade-up">
+        <div class="bg-white-100 py-12 px-4 font-[sans-serif] text-[#333]">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-extrabold mb-5 text-center">
+              Inverti En Vacamuerta
+            </h2>
+            <h4 class="text-2xl font-bold mb-12 text-center">
+              Comparando inversion con Capital al pasar del tiempo
+            </h4>
+            <br></br>
+            <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-x-4 gap-y-8">
+              <div class="mx-auto">
+                <div class="w-28 h-28 bg-white flex items-center justify-center shrink-0 border-2 rounded-full">
+                  <h3 class="text-2xl font-extrabold">200%</h3>
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-lg font-bold">Partners</p>
+                </div>
+              </div>
+              <div class="mx-auto">
+                <div class="w-28 h-28 bg-white flex items-center justify-center shrink-0 border-2 rounded-full">
+                  <h3 class="text-2xl font-extrabold">300%</h3>
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-lg font-bold">Projects</p>
+                </div>
+              </div>
+              <div class="mx-auto">
+                <div class="w-28 h-28 bg-white flex items-center justify-center shrink-0 border-2 rounded-full">
+                  <h3 class="text-2xl font-extrabold">15%</h3>
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-lg font-bold">Countries</p>
+                </div>
+              </div>
+              <div class="mx-auto">
+                <div class="w-28 h-28 bg-white flex items-center justify-center shrink-0 border-2 rounded-full">
+                  <h3 class="text-2xl font-extrabold">500%</h3>
+                </div>
+                <div class="text-center mt-4">
+                  <p class="text-lg font-bold">Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <button onClick={handleRepeatAnimation} className="repeat-button">
           <svg
             class="w-6 h-6 text-gray-800 dark:text-white"
@@ -151,17 +197,16 @@ const InvestmentComparisonChart = () => {
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="m16 10 3-3m0 0-3-3m3 3H5v3m3 4-3 3m0 0 3 3m-3-3h14v-3"
+              d="M8 18V6l8 6-8 6Z"
             />
           </svg>
         </button>
-        <p className="chart-description">
-          Aquí puedes ver una comparación entre las inversiones A y B en los
-          últimos 30 años.
-        </p>
-
         {chartData && (
-          <Line key={animationKey} data={chartData} options={chartOptions} />
+          <Line
+            key={animationKey}
+            data={chartData}
+            options={chartOptions}
+          ></Line>
         )}
       </div>
     </div>
