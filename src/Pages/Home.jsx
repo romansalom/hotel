@@ -61,7 +61,9 @@ function Home() {
         <VideoBackground></VideoBackground>
 
         <InvestmentComparisonChart></InvestmentComparisonChart>
-        <Contacto id="contacto" />
+        {
+          //    <Contacto id="contacto" /> ///
+        }
       </div>
       {/* Resto del contenido */}
 
