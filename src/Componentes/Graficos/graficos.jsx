@@ -84,7 +84,7 @@ const InvestmentComparisonChart = () => {
         });
       },
       {
-        threshold: 1.0, // El componente debe estar completamente visible
+        threshold: 0.1, // El componente debe estar completamente visible
       }
     );
 
