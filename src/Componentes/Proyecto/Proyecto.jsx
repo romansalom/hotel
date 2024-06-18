@@ -127,12 +127,10 @@ const ResponsiveImageTextComponent = () => {
           className="flex flex-col md:flex-row items-start md:items-center justify-center space-y-4 md:space-y-0 md:space-x-8"
           data-aos="fade-up"
         >
-          <div
-            className="relative overflow-hidden rounded-xl hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
-            onClick={(e) => handleImageClick(e)}
-          >
+          <div className="relative overflow-hidden rounded-xl hover:scale-10 hover:shadow-2xl transition duration-300 ease-in-out">
             <div className="image-container relative">
               <img
+                onClick={(e) => handleImageClick(e)}
                 src={images[currentIndex]}
                 alt={`Imagen ${currentIndex + 1}`}
                 className={`image ${
@@ -219,6 +217,10 @@ const ResponsiveImageTextComponent = () => {
             </div>
           </div>
         </div>
+        <br />
+        <br />
+        <br />
+
         <br />
         <br />
         <br />
