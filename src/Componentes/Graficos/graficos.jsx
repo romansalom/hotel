@@ -35,12 +35,12 @@ const InvestmentComparisonChart = () => {
       {
         label: 'Inversión A',
         data: [
-          0, 67, 1900, 2100, 2300, 2500, 2700, 2900, 5100, 3300, 3500, 3700,
-          3900, 4100, 4300, 4500, 2300, 4900, 5100, 5300, 5500, 5700, 5900,
-          6100, 1900, 6500, 6700, 6900, 4100, 7300, 2000, 5400, 2400, 2600,
-          2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 7200, 4600, 4800,
-          2400, 5200, 5400, 7400, 5800, 6000, 6200, 6400, 6600, 6800, 4800,
-          7200, 7400, 7600, 7800,
+          0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000,
+          12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000,
+          22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 31000,
+          32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 41000,
+          42000, 43000, 44000, 45000, 46000, 47000, 48000, 49000, 50000, 51000,
+          52000, 53000, 54000, 55000, 56000, 57000, 58000, 59000,
         ],
         fill: false,
         backgroundColor: 'rgba(0, 0, 0, 0.2)', // Fondo negro con transparencia
@@ -53,12 +53,12 @@ const InvestmentComparisonChart = () => {
       {
         label: 'Inversión B',
         data: [
-          0, 3, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200,
-          7200, 4600, 4800, 2400, 5200, 5400, 7400, 5800, 6000, 6200, 6400,
-          6600, 6800, 4800, 7200, 7400, 7600, 7800, 1500, 6700, 1900, 2100,
-          2300, 2500, 2700, 2900, 5100, 3300, 3500, 3700, 3900, 4100, 4300,
-          4500, 2300, 4900, 5100, 5300, 5500, 5700, 5900, 6100, 1900, 6500,
-          6700, 6900, 4100, 7300,
+          0, 700, 1400, 2100, 2800, 3500, 4200, 4900, 5600, 6300, 7000, 7700,
+          8400, 9100, 9800, 10500, 11200, 11900, 12600, 13300, 14000, 14700,
+          15400, 16100, 16800, 17500, 18200, 18900, 19600, 20300, 21000, 21700,
+          22400, 23100, 23800, 24500, 25200, 25900, 26600, 27300, 28000, 28700,
+          29400, 30100, 30800, 31500, 32200, 32900, 33600, 34300, 35000, 35700,
+          36400, 37100, 37800, 38500, 39200, 39900, 40600, 41300,
         ],
         fill: false,
         backgroundColor: 'rgba(255, 215, 0, 0.2)', // Fondo dorado con transparencia
@@ -158,10 +158,34 @@ const InvestmentComparisonChart = () => {
     scales: {
       x: {
         type: 'linear',
+        ticks: {
+          color: 'black', // Color de los ticks en el eje X
+          borderWidth: 2,
+          font: {
+            size: '15px', // Tamaño de la letra en el eje X
+          }, // Grosor de los ticks en el eje X
+        },
+        grid: {
+          color: 'rgba(0, 0, 0, 0.0)', // Color de la cuadrícula en el eje X
+          borderWidth: 2, // Grosor de la cuadrícula en el eje X
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: 'black', // Color de los ticks en el eje Y
+          borderWidth: 2,
+          font: {
+            size: '13px', // Tamaño de la letra en el eje X
+          }, // Grosor de los ticks en el eje Y
+        },
+        grid: {
+          color: 'rgba(0, 0, 0, 0.0)', // Color de la cuadrícula en el eje Y
+          borderWidth: 2, // Grosor de la cuadrícula en el eje Y
+        },
       },
     },
   };
-
   return (
     <div className="componentesa" ref={chartRef}>
       <div className="chart-container">
@@ -172,6 +196,20 @@ const InvestmentComparisonChart = () => {
             </h2>
             <h4 className="text-2xl font-bold mb-12 text-center">
               Comparando inversión con Capital al pasar del tiempo
+              <svg
+                onClick={handleRepeatAnimation}
+                className="w-6 h-6 ml-2 text-gray-800 dark:text-white cursor-pointer"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </h4>
           </div>
         </div>
@@ -179,7 +217,6 @@ const InvestmentComparisonChart = () => {
         {chartData &&
           isIntersecting && ( // Solo renderizar el gráfico cuando esté en la vista
             <Line
-              onClick={handleRepeatAnimation}
               key={animationKey}
               data={chartData}
               options={chartOptions}
