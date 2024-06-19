@@ -27,6 +27,8 @@ const InvestmentComparisonChart = () => {
   const [chartData, setChartData] = useState(null);
   const [animationKey, setAnimationKey] = useState(0);
   const chartRef = useRef(null); // Referencia para el componente gráfico
+  const [showChart, setShowChart] = useState(true); // Estado para controlar la visualización del gráfico
+  const [showText, setShowText] = useState(false); // Estado para controlar la visualización del texto
   const [isIntersecting, setIsIntersecting] = useState(false); // Estado para saber si el componente está en vista
 
   const data = {
@@ -80,11 +82,13 @@ const InvestmentComparisonChart = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsIntersecting(true);
+          } else {
+            setIsIntersecting(false);
           }
         });
       },
       {
-        threshold: 0.1, // El componente debe estar completamente visible
+        threshold: 0.1, // El componente debe estar al menos parcialmente visible
       }
     );
 
@@ -186,10 +190,23 @@ const InvestmentComparisonChart = () => {
       },
     },
   };
+
+  // Función para manejar la transición del gráfico al texto
+  const handleChartTransition = () => {
+    setShowChart(false); // Ocultar el gráfico
+    setShowText(true); // Mostrar el texto
+
+    // Después de 10 segundos, regresar al gráfico
+    setTimeout(() => {
+      setShowText(false);
+      setShowChart(true);
+    }, 10000);
+  };
+
   return (
     <div className="componentesa" ref={chartRef}>
       <div className="chart-container">
-        <div className="bg-white-100 py-12 px-4 font-[sans-serif] text-[#333]">
+        {showChart && ( // Mostrar el gráfico cuando showChart es true
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-extrabold mb-5 text-center">
               Inverti En Vacamuerta
@@ -212,10 +229,11 @@ const InvestmentComparisonChart = () => {
               </svg>
             </h4>
           </div>
-        </div>
+        )}
 
         {chartData &&
-          isIntersecting && ( // Solo renderizar el gráfico cuando esté en la vista
+          showChart &&
+          isIntersecting && ( // Mostrar el gráfico cuando se cumplen las condiciones
             <Line
               key={animationKey}
               data={chartData}
@@ -224,6 +242,12 @@ const InvestmentComparisonChart = () => {
               height={300} // Alto fijo para el gráfico
             />
           )}
+
+        {showText && ( // Mostrar el texto cuando showText es true
+          <div className="text-center text-xl font-bold mt-5">
+            Este es el cuadro de texto que se muestra durante 10 segundos.
+          </div>
+        )}
       </div>
     </div>
   );
