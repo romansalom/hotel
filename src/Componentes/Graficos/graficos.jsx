@@ -33,7 +33,7 @@ const InvestmentComparisonChart = () => {
     labels: Array.from({ length: 50 }, (_, i) => i + 1),
     datasets: [
       {
-        label: 'Inversión A',
+        label: 'Vacamuerta',
         data: [
           0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000,
           12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000,
@@ -51,7 +51,7 @@ const InvestmentComparisonChart = () => {
         pointHoverRadius: 0, // Curvar la línea para un efecto parabólico
       },
       {
-        label: 'Inversión B',
+        label: 'Capital',
         data: [
           0, 700, 1400, 2100, 2800, 3500, 4200, 4900, 5600, 6300, 7000, 7700,
           8400, 9100, 9800, 10500, 11200, 11900, 12600, 13300, 14000, 14700,
