@@ -37,16 +37,16 @@ const InvestmentComparisonChart = () => {
       {
         label: 'Vacamuerta',
         data: [
-          0, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000,
-          12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000, 21000,
-          22000, 23000, 24000, 25000, 26000, 27000, 28000, 29000, 30000, 31000,
-          32000, 33000, 34000, 35000, 36000, 37000, 38000, 39000, 40000, 41000,
-          42000, 43000, 44000, 45000, 46000, 47000, 48000, 49000, 50000, 51000,
-          52000, 53000, 54000, 55000, 56000, 57000, 58000, 59000,
+          0, 1090, 2000, 3000, 4000, 5000, 6900, 7000, 8900, 9000, 10000, 11000,
+          12000, 13000, 14000, 15900, 16000, 17900, 18000, 19000, 29000, 21000,
+          22000, 23900, 24900, 25000, 26000, 27900, 28000, 29000, 39000, 31000,
+          32000, 33000, 34000, 35000, 36000, 37000, 38000, 99000, 40000, 41000,
+          42000, 43000, 44000, 49000, 46000, 49000, 48000, 49000, 50000, 59000,
+          52000, 53000, 59000, 55000, 56000, 57000, 58000, 59000,
         ],
         fill: false,
         backgroundColor: 'rgba(0, 0, 0, 0.2)', // Fondo negro con transparencia
-        borderColor: 'rgb(0, 0, 0)',
+        borderColor: 'white',
         borderWidth: 7, // Aumentar el grosor de la línea
         tension: 0.6,
         pointRadius: 0, // Tamaño de los puntos (0 para eliminarlos)
@@ -55,12 +55,30 @@ const InvestmentComparisonChart = () => {
       {
         label: 'Capital',
         data: [
-          0, 700, 1400, 2100, 2800, 3500, 4200, 4900, 5600, 6300, 7000, 7700,
-          8400, 9100, 9800, 10500, 11200, 11900, 12600, 13300, 14000, 14700,
-          15400, 16100, 16800, 17500, 18200, 18900, 19600, 20300, 21000, 21700,
-          22400, 23100, 23800, 24500, 25200, 25900, 26600, 27300, 28000, 28700,
-          29400, 30100, 30800, 31500, 32200, 32900, 33600, 34300, 35000, 35700,
-          36400, 37100, 37800, 38500, 39200, 39900, 40600, 41300,
+          0, 745, 1440, 2400, 2804, 3540, 4400, 4400, 5400, 6540, 7040, 7400,
+          8440, 9140, 9840, 10400, 11240, 11940, 12400, 13340, 14400, 14740,
+          15800, 86100, 16580, 18500, 58280, 18800, 19800, 20800, 21800, 21780,
+          22200, 22100, 23820, 54200, 25200, 25920, 26620, 27200, 28250, 28200,
+          29900, 39100, 30900, 31900, 32900, 92900, 39600, 34900, 95000, 35900,
+          36500, 37100, 35800, 35500, 39200, 39900, 40600, 41300,
+        ],
+        fill: false,
+        backgroundColor: 'rgba(255, 215, 0, 0.2)', // Fondo dorado con transparencia
+        borderColor: 'blue', // Borde dorado
+        borderWidth: 7, // Aumentar el grosor de la línea
+        tension: 0.6,
+        pointRadius: 0, // Tamaño de los puntos (0 para eliminarlos)
+        pointHoverRadius: 0, // Curvar la línea para un efecto parabólico
+      },
+      {
+        label: 'otros',
+        data: [
+          0, 732, 1430, 3530, 2300, 3300, 3230, 4330, 3300, 63303, 7300, 7300,
+          8300, 9130, 9300, 13200, 11300, 31900, 12630, 13300, 14300, 14300,
+          15300, 16300, 16300, 17530, 18200, 18300, 13600, 23320, 31000, 21730,
+          22300, 23300, 23800, 23500, 23200, 25230, 26300, 23300, 23200, 28300,
+          29430, 30300, 33500, 33500, 33500, 32530, 33530, 34330, 35300, 35700,
+          36300, 33100, 37300, 53500, 53200, 39300, 40530, 41330,
         ],
         fill: false,
         backgroundColor: 'rgba(255, 215, 0, 0.2)', // Fondo dorado con transparencia
@@ -163,7 +181,7 @@ const InvestmentComparisonChart = () => {
       x: {
         type: 'linear',
         ticks: {
-          color: 'black', // Color de los ticks en el eje X
+          color: 'white', // Color de los ticks en el eje X
           borderWidth: 2,
           font: {
             size: '15px', // Tamaño de la letra en el eje X
@@ -177,7 +195,7 @@ const InvestmentComparisonChart = () => {
       y: {
         beginAtZero: true,
         ticks: {
-          color: 'black', // Color de los ticks en el eje Y
+          color: 'white', // Color de los ticks en el eje Y
           borderWidth: 2,
           font: {
             size: '13px', // Tamaño de la letra en el eje X
@@ -208,26 +226,7 @@ const InvestmentComparisonChart = () => {
       <div className="chart-container">
         {showChart && ( // Mostrar el gráfico cuando showChart es true
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-extrabold mb-5 text-center">
-              Inverti En Vacamuerta
-            </h2>
-            <h4 className="text-2xl font-bold mb-12 text-center">
-              Comparando inversión con Capital al pasar del tiempo
-              <svg
-                onClick={handleRepeatAnimation}
-                className="w-6 h-6 ml-2 text-gray-800 dark:text-white cursor-pointer"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </h4>
+            <br></br>
           </div>
         )}
 

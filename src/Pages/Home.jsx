@@ -12,6 +12,7 @@ import SeccionBlanca from '../Componentes/NavBar/seccionBlanca';
 import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
 import VideoBackground from '../Componentes/BannerVideo/bannerVideo';
 import InvestmentComparisonChart from '../Componentes/Graficos/graficos';
+import BannerINversion from '../Componentes/BannerInversion/bannerInversion';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -58,14 +59,22 @@ function Home() {
       <div id="separador">
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
-        <VideoBackground></VideoBackground>
-
+        <BannerINversion></BannerINversion>
         <InvestmentComparisonChart></InvestmentComparisonChart>
+
         {
           //    <Contacto id="contacto" /> ///
         }
       </div>
       {/* Resto del contenido */}
+      <div className=" bg-black">
+        {' '}
+        <VideoBackground></VideoBackground>
+      </div>
+      <Contacto></Contacto>
+      <div className=" bg-black">
+        <Footer></Footer>
+      </div>
 
       {/* Logo flotante, visible solo si showLogo es true */}
       {showLogo && (
