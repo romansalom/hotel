@@ -60,21 +60,17 @@ function Home() {
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
         <BannerINversion></BannerINversion>
-        <InvestmentComparisonChart></InvestmentComparisonChart>
+        <div className=" bg-black"> </div>
+        <Contacto></Contacto>
+        <div className=" bg-black">
+          <Footer></Footer>
+        </div>
 
         {
           //    <Contacto id="contacto" /> ///
         }
       </div>
       {/* Resto del contenido */}
-      <div className=" bg-black">
-        {' '}
-        <VideoBackground></VideoBackground>
-      </div>
-      <Contacto></Contacto>
-      <div className=" bg-black">
-        <Footer></Footer>
-      </div>
 
       {/* Logo flotante, visible solo si showLogo es true */}
       {showLogo && (
