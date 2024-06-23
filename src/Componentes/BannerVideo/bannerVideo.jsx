@@ -3,7 +3,11 @@ import './VideoBackground.css';
 
 const VideoBackground = () => {
   // Array de textos para rotar en el botón
-  const buttonTexts = ['SÉ EXCLUSIVO', 'ÚNETE HOY', 'DESCUBRE MÁS'];
+  const buttonTexts = [
+    'SÉ EXCLUSIVO',
+    'ÚNETE HOY',
+    'DESCUBRE MÁS , CONTACTATE',
+  ];
 
   // Estado para el texto actual del botón
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
