@@ -1,0 +1,17 @@
+/* Asegura que el contenedor principal no se desborde */
+.overflow-hidden {
+    overflow-x: hidden;
+}
+
+/* Estilos adicionales para animaciones en dispositivos móviles */
+@media (max-width: 767px) {
+    .fade-right {
+        transform: translateX(0);
+        /* Neutraliza la animación desde la derecha */
+    }
+
+    .fade-left {
+        transform: translateX(0);
+        /* Neutraliza la animación desde la izquierda */
+    }
+}

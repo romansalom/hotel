@@ -1,54 +1,55 @@
-import InvestmentComparisonChart from '../Graficos/graficos';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './bannerinversion.css'; // Asegúrate de tener este archivo CSS para estilos adicionales
 
 const BannerINversion = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duración de la animación en milisegundos
+      easing: 'ease-in-out', // Tipo de animación
+      offset: 300, // Distancia desde el viewport cuando la animación debe empezar
+      once: true, // Si true, la animación se ejecuta solo una vez
+    });
+  }, []);
+
   return (
-    <div class="bg-[#404040] px-8 py-14 font-[sans-serif] text-gray-300">
-      <div class="grid md:grid-cols-2 items-center gap-12 max-w-6xl mx-auto">
+    <div className="bg-[#404040] px-8 py-14 font-[sans-serif] text-gray-300 overflow-hidden">
+      {/* overflow-hidden evita que el contenido desborde horizontalmente */}
+      <div className="grid md:grid-cols-2 items-center gap-12 max-w-6xl mx-auto">
         <div>
-          <h1 class="text-4xl font-bold text-[#f2d6a2]">Startup Website</h1>
-          <p class="mt-6 text-ml">
+          <h1 className="text-4xl font-bold text-[#f2d6a2]">Startup Website</h1>
+          <p className="mt-6 text-ml">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
             accumsan, nunc et tempus blandit, metus mi consectetur nibh, a
             pharetra felis turpis vitae ligula. Etiam laoreet velit nec neque
             ultrices, non consequat mauris tincidunt.
           </p>
         </div>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div class="bg-black flex flex-col items-center text-center rounded md:p-8 p-6">
-            <h3 class="lg:text-5xl text-3xl font-extrabold text-[#f2d6a2]">
-              5.4
-            </h3>
-            <div class="mt-4">
-              <p class="text-sm text-[#f2d6a2]">Total Users</p>
+        <div className="grid sm:grid-cols-2 gap-6">
+          {[
+            { value: '5.4', label: 'Total Users', animation: 'fade-right' },
+            { value: '$80K', label: 'Revenue', animation: 'fade-left' },
+            { value: '100K', label: 'Engagement', animation: 'fade-right' },
+            { value: '99.9%', label: 'Server Uptime', animation: 'fade-left' },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`bg-black flex flex-col items-center text-center rounded md:p-8 p-6 card ${item.animation}`}
+              data-aos={item.animation}
+            >
+              <h3 className="lg:text-5xl text-3xl font-extrabold text-[#f2d6a2]">
+                {item.value}
+              </h3>
+              <div className="mt-4">
+                <p className="text-sm text-[#f2d6a2]">{item.label}</p>
+              </div>
             </div>
-          </div>
-          <div class="bg-black flex flex-col items-center text-center rounded md:p-8 p-6">
-            <h3 class="lg:text-5xl text-3xl font-extrabold text-[#f2d6a2]">
-              $80K
-            </h3>
-            <div class="mt-4">
-              <p class="text-sm text-[#f2d6a2]">Revenue</p>
-            </div>
-          </div>
-          <div class="bg-black flex flex-col items-center text-center rounded md:p-8 p-6">
-            <h3 class="lg:text-5xl text-3xl font-extrabold  text-[#f2d6a2]">
-              100K
-            </h3>
-            <div class="mt-4">
-              <p class="text-sm text-[#f2d6a2]">Engagement</p>
-            </div>
-          </div>
-          <div class="bg-black flex flex-col items-center text-center rounded md:p-8 p-6">
-            <h3 class="lg:text-5xl text-3xl font-extrabold  text-[#f2d6a2]">
-              99.9%
-            </h3>
-            <div class="mt-4">
-              <p class="text-sm text-[#f2d6a2]">Server Uptime</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
 export default BannerINversion;
