@@ -6,7 +6,7 @@ import './bannerinversion.css'; // Asegúrate de tener este archivo CSS para est
 const BannerINversion = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duración de la animación en milisegundos
+      duration: 700, // Duración de la animación en milisegundos
       easing: 'ease-in-out', // Tipo de animación
       offset: 300, // Distancia desde el viewport cuando la animación debe empezar
       once: true, // Si true, la animación se ejecuta solo una vez
