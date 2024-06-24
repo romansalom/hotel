@@ -21,25 +21,43 @@ function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Obtén el elemento de la sección separador
+      // Obtener las secciones de contacto y footer
+      const contactoSection = document.getElementById('contacto');
+      const footerSection = document.getElementById('footer');
       const separadorSection = document.getElementById('separador');
 
       if (separadorSection) {
-        // Obtén las dimensiones y posición de la sección separador
-        const rect = separadorSection.getBoundingClientRect();
+        const separadorRect = separadorSection.getBoundingClientRect();
+        const contactoRect = contactoSection
+          ? contactoSection.getBoundingClientRect()
+          : null;
+        const footerRect = footerSection
+          ? footerSection.getBoundingClientRect()
+          : null;
 
-        // Calcula si la sección está visible en la ventana
-        const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+        // Verificar si estamos en la sección de contacto o footer
+        const inContacto = contactoRect
+          ? contactoRect.top <= window.innerHeight && contactoRect.bottom >= 0
+          : false;
+        const inFooter = footerRect
+          ? footerRect.top <= window.innerHeight && footerRect.bottom >= 0
+          : false;
 
-        // Actualiza el estado de visibilidad del logo basado en la visibilidad de la sección separador
+        // Mostrar el logo solo si estamos en la sección separador y no en contacto o footer
+        const isVisible =
+          separadorRect.top <= window.innerHeight &&
+          separadorRect.bottom >= 0 &&
+          !inContacto &&
+          !inFooter;
+
         setShowLogo(isVisible);
       }
     };
 
-    // Añade el event listener para el scroll
+    // Añadir el event listener para el scroll
     window.addEventListener('scroll', handleScroll);
 
-    // Limpia el event listener cuando el componente se desmonta
+    // Limpiar el event listener cuando el componente se desmonta
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -59,16 +77,12 @@ function Home() {
       <div id="separador">
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
-        <BannerINversion></BannerINversion>
+        <BannerINversion />
 
-        <Contacto></Contacto>
-        <div className=" bg-black">
-          <Footer></Footer>
+        <Contacto id="contacto" />
+        <div className="bg-black" id="footer">
+          <Footer />
         </div>
-
-        {
-          //    <Contacto id="contacto" /> ///
-        }
       </div>
       {/* Resto del contenido */}
 
