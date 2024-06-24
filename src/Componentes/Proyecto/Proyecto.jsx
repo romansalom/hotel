@@ -27,9 +27,8 @@ const ResponsiveImageTextComponent = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 600,
+      duration: 800,
       once: false,
-      easing: 'ease-in-out',
     });
 
     // Preload all images
@@ -122,7 +121,7 @@ const ResponsiveImageTextComponent = () => {
         {/* Primer bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-start md:items-center justify-center space-y-4 md:space-y-0 md:space-x-8"
-          data-aos="fade-up"
+          data-aos="fade-right"
         >
           <div className="relative overflow-hidden rounded-xl hover:scale-10 hover:shadow-2xl transition duration-300 ease-in-out">
             <div className="image-container relative">
@@ -181,7 +180,7 @@ const ResponsiveImageTextComponent = () => {
         {/* Segundo bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-center justify-center font-[sans-serif]"
-          data-aos="fade-up"
+          data-aos="fade-left"
         >
           <div
             className="md:ml-2 lg:ml-2 xl:ml-5 2xl:ml-2 relative mb-4 md:mb-0 md:order-2 lg:order-2 xl:order-2 2xl:order-2 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
@@ -224,7 +223,7 @@ const ResponsiveImageTextComponent = () => {
         {/* Tercer bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-center justify-center"
-          data-aos="fade-up"
+          data-aos="fade-right"
         >
           <div
             className="md:ml-2.5 lg:ml-2.5 xl:ml-2.5 2xl:ml-2.5  relative mb-4 md:mb-0 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
