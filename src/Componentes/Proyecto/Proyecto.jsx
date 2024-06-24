@@ -29,7 +29,7 @@ const ResponsiveImageTextComponent = () => {
     AOS.init({
       duration: 800,
       once: false,
-      easing: 'fade-right',
+      easing: 'ease-in-out',
     });
 
     // Preload all images
