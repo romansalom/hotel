@@ -4,6 +4,7 @@ import './banner.css';
 
 function BannnerSuscribe({ onClose }) {
   const [isLoading, setIsLoading] = useState(false); // State for loading indicator
+  const [isSent, setIsSent] = useState(false); // State for success message
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -13,7 +14,6 @@ function BannnerSuscribe({ onClose }) {
     const SERVICE_ID = 'hotelidservice45454545'; // Your SERVICE_ID from EmailJS Dashboard
     const TEMPLATE_ID = 'template_srm4iz7'; // Your TEMPLATE_ID from EmailJS Dashboard
     const userEmail = e.target.email.value;
-
     // Prepare the template parameters
     const templateParams = {
       from_email: userEmail, // This is where the user's email is passed
@@ -25,7 +25,7 @@ function BannnerSuscribe({ onClose }) {
       .send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID)
       .then((result) => {
         console.log('Email sent successfully:', result.text);
-        // Show success message to the user if desired
+        setIsSent(true); // Set state to show success message
       })
       .catch((error) => {
         console.error('Failed to send email:', error.text);
@@ -33,7 +33,10 @@ function BannnerSuscribe({ onClose }) {
       })
       .finally(() => {
         setIsLoading(false); // Turn off loading state
-        onClose(); // Close the banner after sending the email
+        setTimeout(() => {
+          setIsSent(false); // Hide success message after a delay
+          onClose(); // Close the banner after sending the email
+        }, 2000); // Adjust delay as needed
       });
   };
 
@@ -69,7 +72,7 @@ function BannnerSuscribe({ onClose }) {
             <button
               type="submit"
               className="w-full max-w-[160px] mx-auto rounded-full bg-white text-black py-2"
-              disabled={isLoading} // Disable button when loading
+              disabled={isLoading || isSent} // Disable button when loading or sent
             >
               {isLoading ? (
                 <span className="flex items-center justify-center">
@@ -95,6 +98,8 @@ function BannnerSuscribe({ onClose }) {
                   </svg>
                   Enviando...
                 </span>
+              ) : isSent ? (
+                <span className="text-green-500">Enviado</span>
               ) : (
                 <span className="text-teal-900 font-semibold">Suscríbete</span>
               )}
