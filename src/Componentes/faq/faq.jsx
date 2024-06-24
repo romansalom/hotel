@@ -238,7 +238,7 @@ const Faqs = () => {
               onClick={toggleShowAll}
               className="text-blue-500 font-semibold py-2 px-4 rounded focus:outline-none"
             >
-              Ver más ({totalPreguntas})
+              Ver más ({totalPreguntas - 5})
             </button>
           </div>
         )}
