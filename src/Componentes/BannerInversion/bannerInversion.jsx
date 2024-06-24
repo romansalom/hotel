@@ -8,7 +8,7 @@ const BannerINversion = () => {
     AOS.init({
       duration: 700, // Duración de la animación en milisegundos
       easing: 'ease-in-out', // Tipo de animación
-      offset: 300, // Distancia desde el viewport cuando la animación debe empezar
+      offset: '40%', // Cambiado a porcentaje para iniciar animación al ver el 40% de la sección
       once: true, // Si true, la animación se ejecuta solo una vez
     });
   }, []);

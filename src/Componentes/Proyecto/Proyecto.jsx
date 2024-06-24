@@ -27,7 +27,7 @@ const ResponsiveImageTextComponent = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1000,
       once: false,
       easing: 'ease-in-out',
     });
