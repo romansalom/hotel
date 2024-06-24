@@ -84,9 +84,8 @@ function Home() {
           {' '}
           <Faqs></Faqs>
           <br></br>
-          <Contacto id="contacto" />
         </div>
-
+        <Contacto id="contacto" />
         <div className="bg-black" id="footer">
           <Footer />
         </div>
