@@ -1,3 +1,5 @@
+import InvestmentComparisonChart from '../Graficos/graficos';
+
 const BannerINversion = () => {
   return (
     <div class="bg-black px-8 py-14 font-[sans-serif] text-gray-300">

@@ -6,7 +6,8 @@ const VideoBackground = () => {
   const buttonTexts = [
     'SÉ EXCLUSIVO',
     'ÚNETE HOY',
-    'DESCUBRE MÁS , CONTACTATE',
+    'DESCUBRE MÁS',
+    'CONTACTATE',
   ];
 
   // Estado para el texto actual del botón

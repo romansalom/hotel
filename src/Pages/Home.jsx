@@ -60,7 +60,7 @@ function Home() {
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
         <BannerINversion></BannerINversion>
-        <div className=" bg-black"> </div>
+
         <Contacto></Contacto>
         <div className=" bg-black">
           <Footer></Footer>
