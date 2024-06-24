@@ -119,9 +119,6 @@ const ResponsiveImageTextComponent = () => {
         id="responsiveImageTextComponent"
         className="container mx-auto p-4 mb-8"
       >
-        <br />
-        <br />
-        <br />
         {/* Primer bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-start md:items-center justify-center space-y-4 md:space-y-0 md:space-x-8"
@@ -223,7 +220,6 @@ const ResponsiveImageTextComponent = () => {
 
         <br />
         <br />
-        <br />
 
         {/* Tercer bloque de contenido */}
         <div
@@ -261,6 +257,8 @@ const ResponsiveImageTextComponent = () => {
             </div>
           </div>
         </div>
+        <br></br>
+        <br></br>
       </div>
     </div>
   );
