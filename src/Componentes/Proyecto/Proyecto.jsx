@@ -29,6 +29,7 @@ const ResponsiveImageTextComponent = () => {
     AOS.init({
       duration: 800,
       once: false,
+      easing: 'fade-right',
     });
 
     // Preload all images
@@ -180,7 +181,7 @@ const ResponsiveImageTextComponent = () => {
         {/* Segundo bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-center justify-center font-[sans-serif]"
-          data-aos="fade-left"
+          data-aos="fade-right"
         >
           <div
             className="md:ml-2 lg:ml-2 xl:ml-5 2xl:ml-2 relative mb-4 md:mb-0 md:order-2 lg:order-2 xl:order-2 2xl:order-2 hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out"
