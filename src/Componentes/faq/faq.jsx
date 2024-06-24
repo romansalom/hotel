@@ -109,6 +109,7 @@ const Faqs = () => {
         'Puede hacer una solicitud especial contactando con nuestro equipo de atención al cliente antes de su llegada o durante su estancia.',
     },
   ];
+  let totalPreguntas = faqItems.length;
 
   useEffect(() => {
     // Filtrar los elementos de FAQ basados en el texto de búsqueda
@@ -237,7 +238,7 @@ const Faqs = () => {
               onClick={toggleShowAll}
               className="text-blue-500 font-semibold py-2 px-4 rounded focus:outline-none"
             >
-              Ver más preguntas
+              Ver más ({totalPreguntas})
             </button>
           </div>
         )}
