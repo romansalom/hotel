@@ -13,6 +13,8 @@ import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
 import VideoBackground from '../Componentes/BannerVideo/bannerVideo';
 import InvestmentComparisonChart from '../Componentes/Graficos/graficos';
 import BannerINversion from '../Componentes/BannerInversion/bannerInversion';
+import Faq from '../Componentes/faq/faq';
+import Faqs from '../Componentes/faq/faq';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -78,8 +80,13 @@ function Home() {
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
         <BannerINversion />
+        <div className="bg-[#F2F2F2]">
+          {' '}
+          <Faqs></Faqs>
+          <br></br>
+          <Contacto id="contacto" />
+        </div>
 
-        <Contacto id="contacto" />
         <div className="bg-black" id="footer">
           <Footer />
         </div>
