@@ -1,0 +1,64 @@
+/* Estilos base */
+.video-background-container {
+    position: relative;
+    max-width: 1000px;
+    max-height: 1000px;
+    /* Altura base para dispositivos no móviles */
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .video-background-container {
+        height: 18vh;
+        /* Altura para dispositivos móviles */
+    }
+}
+
+/* Estilos para pantallas muy anchas */
+@media (min-width: 1200px) {
+    .video-background-container {
+        height: 25vh;
+        /* Reducimos la altura en pantallas grandes */
+    }
+}
+
+/* Estilos para pantalla completa */
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+}
+
+.cta-button {
+    padding: 5px 15px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #444;
+}

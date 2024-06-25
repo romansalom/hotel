@@ -2,6 +2,7 @@ import React from 'react';
 import './inversion.css'; // Asegúrate de importar tu archivo CSS aquí
 import { Input, Textarea } from '@nextui-org/react';
 import VideoBackground from '../BannerVideo/bannerVideo';
+import VideoBackgroundVaca from '../BannerVideoVacamuerta/bannerVideo';
 
 function Contacto() {
   return (

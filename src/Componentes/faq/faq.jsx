@@ -236,7 +236,7 @@ const Faqs = () => {
           <div className="mt-4 flex justify-center">
             <button
               onClick={toggleShowAll}
-              className="text-blue-500 font-semibold py-2 px-4 rounded focus:outline-none"
+              className="text-blue-500  py-2 px-4 rounded focus:outline-none"
             >
               Ver más ({totalPreguntas - 5})
             </button>
@@ -247,7 +247,7 @@ const Faqs = () => {
           <div className="mt-4 flex justify-center">
             <button
               onClick={toggleShowLess}
-              className="text-red-500 font-semibold py-2 px-4 rounded focus:outline-none"
+              className="text-red-500 py-2 px-4 rounded focus:outline-none"
             >
               Ver menos preguntas
             </button>

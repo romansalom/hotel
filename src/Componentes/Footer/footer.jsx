@@ -1,4 +1,5 @@
 import VideoBackground from '../BannerVideo/bannerVideo';
+import VideoBackgroundVaca from '../BannerVideoVacamuerta/bannerVideo';
 import './footer.css';
 
 const Footer = () => {
@@ -14,7 +15,7 @@ const Footer = () => {
         {/* Div para dispositivos móviles */}
         <div className="sm:hidden text-center ">
           {' '}
-          <VideoBackground></VideoBackground>
+          <VideoBackgroundVaca></VideoBackgroundVaca>
         </div>
       </div>
 
