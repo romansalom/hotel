@@ -53,7 +53,7 @@ const ResponsiveImageTextComponent = () => {
     };
 
     // Check if the swipe SVG should be shown
-    const shouldShowSwipeSVG = localStorage.getItem('showSwipeSVG');
+    const shouldShowSwipeSVG = localStorage.getItem('showSwipeSVG') !== 'false';
     if (currentIndex === 0 && shouldShowSwipeSVG) {
       setShowSwipeSVG(true);
     }

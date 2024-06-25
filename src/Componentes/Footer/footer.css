@@ -14,3 +14,9 @@
 .bg-dark-gray {
     background-color: #747474 !important;
 }
+
+@media (max-width: 640px) {
+    .hidden {
+        display: none;
+    }
+}

@@ -87,7 +87,7 @@ function Home() {
           <Contacto id="contacto" />
         </div>
 
-        <div className="bg-black" id="footer">
+        <div id="footer">
           <Footer />
         </div>
       </div>
