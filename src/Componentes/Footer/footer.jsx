@@ -22,12 +22,6 @@ const Footer = () => {
       <div className="px-4 py-10 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <p>
-              <p className="font-medium text-gray-900 mb-1">Comunicate</p>
-
-              <p className="font-medium text-gray-900">+54 9 1164339338</p>
-            </p>
-
             <ul className="mt-2 space-y-1 text-sm text-gray-700">
               <li>Monday to Friday: 10am - 5pm</li>
               <li>Weekend: 10am - 3pm</li>

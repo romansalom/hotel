@@ -147,7 +147,7 @@ const Faqs = () => {
   return (
     <div className="mx-auto max-w-6xl p-2 rounded">
       <div className="flex justify-center items-center flex-col mt-10">
-        <h1 className="text-3xl font-bold text-black mb-6">
+        <h1 className="text-2xl font-bold text-black mb-7">
           Preguntas Frecuentes
         </h1>
 
