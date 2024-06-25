@@ -5,8 +5,8 @@ const VideoBackgroundVaca = () => {
   return (
     <div className="video-background-container">
       <video autoPlay loop muted playsInline className="video-background">
-        <source src="vacamuertavideo.mp4" type="video/mp4" />
-        <source src="vacamuertavideo.mp4" type="video/webm" />
+        <source src="VideoBackgroundVaca.mp4" type="video/mp4" />
+        <source src="VideoBackgroundVaca.mp4" type="video/webm" />
         Tu navegador no soporta videos.
       </video>
 
