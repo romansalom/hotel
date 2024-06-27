@@ -8,6 +8,7 @@ import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
 import './home.css';
 import Footer from '../Componentes/Footer/footer.jsx';
 import TimeLine from '../Componentes/TimeLine/timeLine.jsx';
+import GaleriaImagenes from '../Componentes/GaleriaImagenes/galeriaDeImagenes.jsx';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -53,6 +54,7 @@ function Home() {
 
         <BannerINversion />
         <TimeLine></TimeLine>
+        <GaleriaImagenes></GaleriaImagenes>
 
         <div className="bg-[#F2F2F2]">
           <Faqs></Faqs>

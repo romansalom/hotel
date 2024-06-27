@@ -15,7 +15,6 @@ const TimeLine = () => {
         document.querySelectorAll('.timeline-item').forEach((item, index) => {
           setTimeout(() => {
             item.classList.add('aos-animate');
-            item.querySelector('.timeline-progress').style.height = '100%';
           }, index * 700); // Retraso para cada elemento
         });
       }
