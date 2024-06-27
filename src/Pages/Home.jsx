@@ -7,6 +7,7 @@ import Faqs from '../Componentes/faq/faq';
 import BannnerSuscribe from '../Componentes/BannerSuscribe/bannerSuscribe';
 import './home.css';
 import Footer from '../Componentes/Footer/footer.jsx';
+import TimeLine from '../Componentes/TimeLine/timeLine.jsx';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -51,6 +52,8 @@ function Home() {
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
         <BannerINversion />
+        <TimeLine></TimeLine>
+
         <div className="bg-[#F2F2F2]">
           <Faqs></Faqs>
           <br></br>
