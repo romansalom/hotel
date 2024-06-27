@@ -29,9 +29,8 @@
 .timeline-point {
     width: 20px;
     height: 20px;
-    background: #7c1912;
+    background: #f2d6a2;
     border-radius: 50%;
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -158,4 +157,13 @@
     height: 100%;
     object-fit: cover;
     /* Asegura que la imagen cubra el contenedor sin deformarse */
+}
+
+.fecha {
+    color: white;
+
+}
+
+.text-color-p {
+    color: #f2d6a2;
 }

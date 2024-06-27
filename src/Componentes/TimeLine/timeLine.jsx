@@ -72,15 +72,19 @@ const TimeLine = () => {
       <div className="timeline-line"></div>
       <ul className="timeline">
         {timelineItems.map((item, index) => (
-          <li key={index} className="timeline-item " data-aos="fade-up">
-            <div className="timeline-content">
-              <div className="corner-sticker"></div>
-              <div className="timeline-text">
-                <time className="font-mono italic">{item.date}</time>
-                <div className="text-lg font-black">{item.title}</div>
-                <p>{item.content}</p>
+          <li key={index} data-aos="fade-up">
+            {' '}
+            <div className="timeline-point"></div>
+            <div className="corner-sticker"></div>
+            <time className="fecha font-mono italic">{item.date}</time>
+            <li key={index} className="timeline-item" data-aos="fade-up">
+              <div className="timeline-content">
+                <div className="timeline-text">
+                  <div className="text-lg font-black">{item.title}</div>
+                  <p>{item.content}</p>
+                </div>
               </div>
-            </div>
+            </li>
           </li>
         ))}
       </ul>
