@@ -9,7 +9,7 @@ const BannerINversion = () => {
       duration: 700, // Duración de la animación en milisegundos
       easing: 'ease-in-out', // Tipo de animación
       offset: '40%', // Cambiado a porcentaje para iniciar animación al ver el 40% de la sección
-      once: true, // Si true, la animación se ejecuta solo una vez
+      once: false, // Si true, la animación se ejecuta solo una vez
     });
   }, []);
 

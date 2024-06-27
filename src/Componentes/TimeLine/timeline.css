@@ -9,27 +9,55 @@
     list-style: none;
     padding: 0;
     position: relative;
-    max-width: 400px;
+    max-width: 800px;
 }
 
 .timeline-item {
-    margin: 20px 0;
+    margin: 60px 0;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .timeline-item.aos-animate {
     opacity: 1;
 }
 
+.timeline-point {
+    width: 20px;
+    height: 20px;
+    background: #7c1912;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
 .timeline-content {
-    background: #fff;
+    background: #F2F2F2;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 1;
+    max-width: 300px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 60px;
+    order: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: 60px;
+    order: 1;
 }
 
 .timeline-content time {
@@ -49,19 +77,85 @@
     left: 50%;
     width: 4px;
     height: 100%;
-    background: #ccc;
+    background: #f2d6a2;
     transform: translateX(-50%);
     z-index: 0;
 }
 
-.timeline-progress {
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.timeline-content.flipped {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-point {
+        left: calc(50% - 10px);
+        top: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .timeline-content time {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 0.8em;
+    }
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.corner-sticker {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 4px;
-    height: 0;
-    background: #007bff;
-    transform: translateX(-50%);
-    transition: height 1s ease-in-out;
-    z-index: -1;
+    right: 0;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    /* Asegura que esté sobre el contenido */
+}
+
+
+.timeline-content {
+    position: relative;
+    z-index: 0;
+    /* Asegura que el contenido esté detrás de la esquina */
+}
+
+.timeline-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el contenedor sin deformarse */
 }
