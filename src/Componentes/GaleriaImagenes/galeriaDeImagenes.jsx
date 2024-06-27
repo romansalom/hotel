@@ -18,14 +18,14 @@ function GaleriaImagenes() {
         >
           <div className="flex flex-wrap md:-m-2 -m-1">
             <div className="flex flex-wrap w-full md:w-1/2">
-              <div className="md:p-2 p-1 w-1/2" data-aos="fade-right">
+              <div className="md:p-2 p-1 w-1/2" data-aos="fade-up">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
                   src="https://dummyimage.com/500x300"
                 />
               </div>
-              <div className="md:p-2 p-1 w-1/2" data-aos="fade-left">
+              <div className="md:p-2 p-1 w-1/2" data-aos="fade-right">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
@@ -48,14 +48,14 @@ function GaleriaImagenes() {
                   src="https://dummyimage.com/601x361"
                 />
               </div>
-              <div className="md:p-2 p-1 w-1/2" data-aos="fade-right">
+              <div className="md:p-2 p-1 w-1/2" data-aos="fade-up">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
                   src="https://dummyimage.com/502x302"
                 />
               </div>
-              <div className="md:p-2 p-1 w-1/2" data-aos="fade-left">
+              <div className="md:p-2 p-1 w-1/2" data-aos="fade-right">
                 <img
                   alt="gallery"
                   className="w-full object-cover h-full object-center block"
