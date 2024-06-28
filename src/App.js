@@ -1,3 +1,4 @@
+import Navbar from './Componentes/NavBar/seccionBlanca';
 import Home from './Pages/Home';
 
 function App() {

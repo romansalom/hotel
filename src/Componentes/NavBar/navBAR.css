@@ -1,23 +1,54 @@
-.hover-underline-animation {
+.fondoheader {
+    /* Actualiza el gradiente para usar el color #F2D6A2 */
+    background: linear-gradient(to right, #404040, #F2D6A2);
+    /* Resto de tus estilos */
     position: relative;
-    display: inline-block;
-}
-
-.hover-underline-animation::after {
-    content: '';
-    position: absolute;
     width: 100%;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
+    display: flex;
+
 }
 
-.hover-underline-animation:hover::after,
-.hover-underline-animation:focus::after {
-    visibility: visible;
-    transform: scaleX(1);
+.botonMenuCirucular {
+    position: fixed;
+    bottom: 20px;
+    /* Cambia este valor según tu preferencia */
+    right: 20px;
+    /* Cambia este valor según tu preferencia */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+.botonMenuCirucular a {
+    background-color: #f2d6a2;
+    /* Cambia el color de fondo según tus preferencias */
+    color: #fff;
+    /* Cambia el color del icono según tus preferencias */
+    width: 30px;
+    /* Ajusta el ancho del botón según tus preferencias */
+    height: 30px;
+    /* Ajusta el alto del botón según tus preferencias */
+    border-radius: 50%;
+    /* Asegura que el botón sea redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Añade una sombra para dar profundidad */
+    transition: all 0.3s ease;
+    /* Añade una transición suave */
+}
+
+.botonMenuCirucular a:hover {
+    background-color: #bea87f;
+    /* Cambia el color de fondo al pasar el cursor sobre él */
+}
+
+.botonMenuCirucularw {
+    position: fixed;
+    bottom: 100px;
+    /* Cambia este valor según tu preferencia */
+    right: 20px;
+    /* Cambia este valor según tu preferencia */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
 }

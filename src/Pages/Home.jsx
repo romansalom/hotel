@@ -9,24 +9,39 @@ import './home.css';
 import Footer from '../Componentes/Footer/footer.jsx';
 import TimeLine from '../Componentes/TimeLine/timeLine.jsx';
 import GaleriaImagenes from '../Componentes/GaleriaImagenes/galeriaDeImagenes.jsx';
+import Navbar, {
+  handleClickBoton,
+} from '../Componentes/NavBar/seccionBlanca.jsx';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
+  const [showSmallCircles, setShowSmallCircles] = useState(false);
   const mensaje = '¡Hola! Estoy interesado.';
+
+  const handleMainCircleClick = () => {
+    setShowSmallCircles(!showSmallCircles);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const separadorSection = document.getElementById('separador');
+      const headerSection = document.querySelector('header');
 
-      if (separadorSection) {
+      if (separadorSection && headerSection) {
         const separadorRect = separadorSection.getBoundingClientRect();
+        const headerRect = headerSection.getBoundingClientRect();
 
         // Mostrar el logo solo si estamos en la sección separador
-        const isVisible =
+        const isSeparadorVisible =
           separadorRect.top <= window.innerHeight && separadorRect.bottom >= 0;
 
-        setShowLogo(isVisible);
+        // Cerrar los círculos adicionales si estamos en el header
+        if (headerRect.top <= window.innerHeight && headerRect.bottom >= 0) {
+          setShowSmallCircles(false);
+        }
+
+        setShowLogo(isSeparadorVisible);
       }
     };
 
@@ -43,9 +58,16 @@ function Home() {
     setShowBanner(false); // Ocultar el banner al hacer clic en la "x".
   };
 
+  const handleNavbarClick = () => {
+    // Llama a handleClickBoton para cambiar el estado del Navbar
+    handleClickBoton();
+  };
+
   return (
     <div id="App" className="App">
       {showBanner && <BannnerSuscribe onClose={handleClose} />}
+      <Navbar />
+
       <Headers />
 
       {/* Contenido de la primera sección */}
@@ -53,31 +75,18 @@ function Home() {
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
 
         <BannerINversion />
-        <TimeLine></TimeLine>
-        <GaleriaImagenes></GaleriaImagenes>
+        <TimeLine />
+        <GaleriaImagenes />
 
         <div className="bg-[#F2F2F2]">
-          <Faqs></Faqs>
-          <br></br>
+          <Faqs />
+          <br />
           <Contacto id="contacto" />
-          <Footer></Footer>
+          <Footer />
         </div>
       </div>
 
       {/* Logo flotante, visible solo si showLogo es true */}
-      {showLogo && (
-        <div className="whatsapp-float">
-          <a
-            href={`https://wa.me/+5491164339338?text=${encodeURIComponent(
-              mensaje
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      )}
     </div>
   );
 }

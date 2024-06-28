@@ -1,4 +1,4 @@
-.whatsapp-float {
+.botonMenuCirucular {
     position: fixed;
     bottom: 20px;
     /* Cambia este valor según tu preferencia */
@@ -8,14 +8,14 @@
     /* Asegura que esté por encima de otros elementos */
 }
 
-.whatsapp-float a {
-    background-color: #25d366;
+.botonMenuCirucular a {
+    background-color: #f2d6a2;
     /* Cambia el color de fondo según tus preferencias */
     color: #fff;
     /* Cambia el color del icono según tus preferencias */
-    width: 60px;
+    width: 30px;
     /* Ajusta el ancho del botón según tus preferencias */
-    height: 60px;
+    height: 30px;
     /* Ajusta el alto del botón según tus preferencias */
     border-radius: 50%;
     /* Asegura que el botón sea redondo */
@@ -28,12 +28,17 @@
     /* Añade una transición suave */
 }
 
-.whatsapp-float a:hover {
-    background-color: #128c7e;
+.botonMenuCirucular a:hover {
+    background-color: #bea87f;
     /* Cambia el color de fondo al pasar el cursor sobre él */
 }
 
-.whatsapp-float i.fab {
-    font-size: 30px;
-    /* Aumenta el tamaño del ícono */
+.botonMenuCirucularw {
+    position: fixed;
+    bottom: 100px;
+    /* Cambia este valor según tu preferencia */
+    right: 20px;
+    /* Cambia este valor según tu preferencia */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
 }
