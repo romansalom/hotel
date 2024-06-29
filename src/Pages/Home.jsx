@@ -12,6 +12,7 @@ import GaleriaImagenes from '../Componentes/GaleriaImagenes/galeriaDeImagenes.js
 import Navbar, {
   handleClickBoton,
 } from '../Componentes/NavBar/seccionBlanca.jsx';
+import UnderHeader from '../Componentes/UnderHeader/unerHeader.jsx';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -69,6 +70,7 @@ function Home() {
       <Navbar />
 
       <Headers />
+      <UnderHeader></UnderHeader>
 
       {/* Contenido de la primera sección */}
       <div id="separador">
