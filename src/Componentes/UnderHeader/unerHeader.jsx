@@ -13,7 +13,7 @@ const UnderHeader = () => {
           {/* ¿Qué es Vaca Muerta? */}
           <div className="flex flex-col items-center">
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              ¿Qué es Vaca Muerta?
+              ¿Qué es Vaca Muerta?sssssssssss
             </p>
             <p className="text-gray-600 mt-4 max-w-md mx-auto">
               Vaca Muerta, en la provincia de Neuquén, Argentina, es una de las
