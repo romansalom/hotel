@@ -144,7 +144,7 @@ const ResponsiveImageTextComponent = () => {
                   <br />
                 </div>{' '}
                 <div className="flex justify-center items-center h-60 lg:h-96">
-                  <div className="image-container lg:py-14  object-cover object-center rounded w-full h-full">
+                  <div className="image-container  object-cover object-center rounded w-full h-full">
                     <img
                       onClick={(e) => handleImageClick(e)}
                       src={images[currentIndex]}
