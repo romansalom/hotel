@@ -78,7 +78,7 @@ function Home() {
         <BannerINversion />
         <TimeLine />
         <GaleriaImagenes />
-        <div className="bg-[#fdfef4]">
+        <div className="bg-[#ffffff]">
           <Faqs />
           <br />
 

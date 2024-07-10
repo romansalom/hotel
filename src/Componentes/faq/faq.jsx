@@ -138,7 +138,7 @@ const Faqs = () => {
   };
 
   return (
-    <div className="playfair-display-letras mx-auto max-w-6xl p-2 rounded bg-[#fdfef4]">
+    <div className="playfair-display-letras mx-auto max-w-6xl p-2 rounded bg-[#ffffff]">
       <div className="flex justify-center items-center flex-col mt-5">
         <h2 className="lg:text-4xl md:text-4xl text-3xl font-extrabold mb-4 lg:!leading-[55px] lg:mt-10 sm:text-4xl sm:leading-tight text-black">
           Preguntas frecuentes
