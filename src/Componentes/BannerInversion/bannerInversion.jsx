@@ -22,18 +22,29 @@ const BannerINversion = () => {
             ¿Cómo comenzar a invertir?
           </h1>
           <p className="mt-6 text-ml">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            accumsan, nunc et tempus blandit, metus mi consectetur nibh, a
-            pharetra felis turpis vitae ligula. Etiam laoreet velit nec neque
-            ultrices, non consequat mauris tincidunt.
+            Para formar parte de este proyecto, la inversión mínima es de 80,000
+            USD. Esta inversión te garantiza una unidad funcional en nuestro
+            edificio, asegurándote un retorno desde el primer día. Nuestro
+            modelo de inversión está diseñado para ofrecerte una rentabilidad
+            atractiva. Durante la construcción del edificio, recibirás un
+            retorno del 0.5% mensual sobre tu inversión. Una vez finalizada la
+            construcción, este retorno aumentará al 1% mensual.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 gap-6">
           {[
-            { value: '5.4', label: 'Total Users', animation: 'fade-right' },
-            { value: '$80K', label: 'Revenue', animation: 'fade-left' },
-            { value: '100K', label: 'Engagement', animation: 'fade-right' },
-            { value: '99.9%', label: 'Server Uptime', animation: 'fade-left' },
+            {
+              value: '0.5%',
+              label: 'Retorno mensual durante la construcción',
+              animation: 'fade-right',
+            },
+            { value: '$80K', label: 'Inversion', animation: 'fade-left' },
+            {
+              value: '1%',
+              label: 'Retorno mensual finalizada',
+              animation: 'fade-right',
+            },
+            { value: '1', label: 'Unidad', animation: 'fade-left' },
           ].map((item, index) => (
             <div
               key={index}

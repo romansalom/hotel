@@ -1,112 +1,105 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Faqs = () => {
   const [search, setSearch] = useState('');
   const [openIndex, setOpenIndex] = useState(-1); // Track which FAQ item is open
   const [filteredFaqItems, setFilteredFaqItems] = useState([]); // State for filtered items
   const [showAll, setShowAll] = useState(false); // State to toggle showing all FAQs
-  const initialDisplayCount = 3; // Number of FAQs to display initially
+  const initialDisplayCount = 4; // Number of FAQs to display initially
 
   const faqItems = [
     {
-      question: '¿Cuáles son los horarios de check-in y check-out?',
+      question: '¿Qué servicios ofrece la empresa?',
       answer:
-        'El horario de check-in es a las 15:00 y el check-out es a las 12:00 del mediodía.',
+        'Nos encargamos de equipar completamente su departamento, desde muebles y electrodomésticos hasta decoración y utensilios de cocina',
     },
     {
-      question: '¿Aceptan mascotas en el hotel?',
+      question: '¿Qué tipo de departamentos equipan?',
       answer:
-        'Sí, aceptamos mascotas. Hay una tarifa adicional por noche y se aplican ciertas restricciones.',
+        'Equipamos todo tipo de departamentos, ya sean estudios, departamentos de una o varias habitaciones, o lofts.',
     },
     {
-      question: '¿Ofrecen servicio de transporte al aeropuerto?',
+      question: '¿Cómo funciona el proceso de equipamiento?',
       answer:
-        'Sí, tenemos servicio de transporte al aeropuerto disponible las 24 horas del día. Es necesario reservar con anticipación.',
+        'Nuestro proceso es sencillo: nos reunimos con usted para entender sus necesidades y preferencias, le presentamos un plan de diseño y, una vez aprobado, nos encargamos de todo el equipamiento.',
     },
     {
-      question: '¿El hotel cuenta con estacionamiento?',
-      answer: 'Sí, ofrecemos estacionamiento gratuito para nuestros huéspedes.',
+      question: '¿Cuánto tiempo tarda el proceso de equipamiento?',
+      answer:
+        ' El tiempo varía según el tamaño y las especificaciones del departamento, pero generalmente completamos el equipamiento en un plazo de 2 a 4 semanas.',
     },
     {
-      question: '¿Se pueden hacer reservas sin tarjeta de crédito?',
+      question: '¿Puedo personalizar los muebles y la decoración?',
       answer:
-        'Para garantizar la reserva, se requiere una tarjeta de crédito válida al momento de reservar. Sin embargo, ofrecemos opciones de pago en efectivo a la llegada bajo ciertas condiciones.',
+        'Si, se pueden quitar articulos de las lineas prearmadas si no le gustan y quedarse solo con los articulos deseados',
     },
     {
-      question: '¿Tienen habitaciones para no fumadores?',
+      question: '¿Ofrecen paquetes prediseñados?',
       answer:
-        'Sí, tenemos habitaciones designadas para no fumadores. Por favor, solicite una al hacer su reserva.',
-    },
-    {
-      question: '¿Cuáles son las opciones de restaurante dentro del hotel?',
-      answer:
-        'Ofrecemos un restaurante abierto para desayunos, almuerzos y cenas con una variedad de opciones gastronómicas.',
+        ' Sí, ofrecemos varios paquetes prediseñados con nuestro equipo de interiorismo para combinar estilo y practicidad.',
     },
     {
       question:
-        '¿El hotel cuenta con acceso para personas con movilidad reducida?',
+        '¿Qué sucede si no estoy satisfecho con algún elemento del equipamiento?',
       answer:
-        'Sí, todas nuestras áreas públicas y habitaciones están diseñadas para ser accesibles para personas con movilidad reducida.',
+        'Nuestro objetivo es su satisfacción total. Si hay algo con lo que no está contento, trabajaremos con usted para solucionarlo lo más rápido posible.',
     },
     {
-      question: '¿Ofrecen servicio de habitaciones las 24 horas?',
+      question: '¿Cuál es el costo de sus servicios?',
       answer:
-        'Sí, tenemos servicio de habitaciones disponible las 24 horas para nuestros huéspedes.',
+        'El costo varía según el tamaño del departamento y el nivel de personalización requerido. Ofrecemos cotizaciones detalladas después de la consulta inicial.',
     },
     {
-      question: '¿Cuál es la política de cancelación del hotel?',
+      question: '¿Ofrecen financiamiento o planes de pago?',
       answer:
-        'Nuestra política de cancelación varía según el tipo de tarifa y la temporada. Le recomendamos revisar los detalles al momento de hacer su reserva.',
+        'Sí, tenemos opciones de financiamiento y planes de pago para facilitarle el proceso.',
     },
     {
-      question: '¿El hotel tiene piscina y gimnasio?',
+      question: '¿Qué incluye exactamente el servicio de equipamiento?',
       answer:
-        'Sí, contamos con piscina y gimnasio para uso exclusivo de nuestros huéspedes.',
+        'Nuestro servicio incluye muebles, electrodomésticos, utensilios de cocina, ropa de cama, toallas, artículos de decoración, y más. Todo lo que necesita para mudarse con la valija',
     },
     {
-      question: '¿Se ofrecen servicios de lavandería y planchado?',
+      question: '¿Cómo puedo solicitar una cotización?',
       answer:
-        'Sí, tenemos servicios de lavandería y planchado disponibles para nuestros huéspedes.',
+        ' Puede solicitar una cotización a través de nuestro formulario en línea, por teléfono, o concertando una cita para una consulta gratuita.',
     },
     {
-      question: '¿Tienen programas especiales para familias con niños?',
+      question:
+        '¿Tienen algún tipo de garantía sobre los productos y servicios?',
       answer:
-        'Sí, ofrecemos programas y actividades especiales para familias con niños, incluyendo áreas de juego y menús infantiles en nuestro restaurante.',
+        'Sí, ofrecemos garantías sobre todos los productos y servicios proporcionados. La duración y términos de la garantía pueden variar según el artículo y el proveedor.',
     },
     {
-      question: '¿El hotel ofrece servicio de internet y Wi-Fi?',
+      question: '¿Puedo ver ejemplos de departamentos equipados por ustedes?',
       answer:
-        'Sí, tenemos servicio de internet y Wi-Fi gratuito disponible en todas las áreas del hotel.',
+        ' Sí, en nuestra página web tenemos una galería de fotos y testimonios de clientes satisfechos.',
     },
     {
-      question: '¿El hotel organiza excursiones y tours?',
+      question: '¿Ofrecen mantenimiento y servicios post-venta?',
       answer:
-        'Sí, ofrecemos servicios de organización de excursiones y tours locales. Consulte en recepción para más detalles y reservas.',
+        'Sí, ofrecemos servicios de mantenimiento y apoyo post-venta para asegurar que su departamento se mantenga en perfectas condiciones.',
     },
     {
-      question: '¿Tienen política de fumado en áreas comunes?',
+      question: '¿Puedo contratar solo algunos de sus servicios?',
       answer:
-        'No, todas nuestras áreas comunes son libres de humo para garantizar el confort de todos nuestros huéspedes.',
+        'Sí, ofrecemos la flexibilidad de contratar servicios individuales según sus necesidades, ya sea solo muebles, decoración o electrodomésticos.',
     },
     {
-      question: '¿Qué medidas de seguridad tienen implementadas?',
+      question: '¿Cómo se maneja la entrega e instalación?',
       answer:
-        'Implementamos estrictos protocolos de seguridad y limpieza para asegurar la salud y bienestar de nuestros huéspedes y empleados.',
+        'Nos encargamos de todo el proceso de entrega e instalación, asegurándonos de que su departamento esté completamente listo para habitar.',
     },
     {
-      question: '¿Ofrecen servicios de cambio de divisas?',
+      question: '¿Tienen certificaciones o acreditaciones?',
       answer:
-        'Sí, tenemos servicio de cambio de divisas disponible en recepción.',
+        'Sí, contamos con diversas certificaciones y acreditaciones que avalan la calidad de nuestros servicios y productos.',
     },
     {
-      question: '¿El hotel tiene salones para eventos y conferencias?',
+      question:
+        '¿Qué medidas de seguridad y salud toman durante el proceso de equipamiento?',
       answer:
-        'Sí, contamos con varios salones equipados para eventos y conferencias, con capacidad y servicios adaptables a sus necesidades.',
-    },
-    {
-      question: '¿Cómo puedo hacer una solicitud especial durante mi estancia?',
-      answer:
-        'Puede hacer una solicitud especial contactando con nuestro equipo de atención al cliente antes de su llegada o durante su estancia.',
+        'Seguimos todas las normativas y recomendaciones en materia de seguridad y salud para garantizar un entorno seguro durante la entrega e instalación.',
     },
   ];
   let totalPreguntas = faqItems.length;
@@ -145,20 +138,19 @@ const Faqs = () => {
   };
 
   return (
-    <div className="mx-auto max-w-6xl p-2 rounded">
+    <div className="playfair-display-letras mx-auto max-w-6xl p-2 rounded bg-[#fdfef4]">
       <div className="flex justify-center items-center flex-col mt-5">
-        <h1 className="text-2xl font-bold text-black mb-5">
-          Preguntas Frecuentes
-        </h1>
-
-        <div className="w-full max-w-xs relative text-gray-600">
+        <h2 className="lg:text-4xl md:text-4xl text-3xl font-extrabold mb-4 lg:!leading-[55px] lg:mt-10 sm:text-4xl sm:leading-tight text-black">
+          Preguntas frecuentes
+        </h2>
+        <div className="w-full max-w-xs relative text-gray-7600">
           <input
             value={search}
             onChange={handleSearch}
             type="search"
             name="search"
             placeholder="Buscar"
-            className="bg-white w-full h-6 px-5 rounded-full text-sm focus:outline-none"
+            className="bg-[#d3d3cb] w-full h-8 px-6 rounded-full text-sm focus:outline-none lg:mb-5"
           />
           <button
             type="submit"
@@ -168,49 +160,47 @@ const Faqs = () => {
       </div>
 
       <div className="mt-6">
-        <div className="flex flex-col">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {filteredFaqItems
             .slice(0, showAll ? filteredFaqItems.length : initialDisplayCount)
             .map((item, index) => (
-              <div key={index} className="p-4">
-                <div className="item">
-                  <a
-                    href="#"
-                    className="flex items-center justify-between"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleOpen(index);
-                    }}
+              <div key={index} className="bg-white shadow-md rounded-lg p-4">
+                <a
+                  href="#"
+                  className="flex items-center justify-between text-[#d3d3cb]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleOpen(index);
+                  }}
+                >
+                  <h4
+                    className={
+                      openIndex === index
+                        ? 'text-[#404040] font-medium'
+                        : 'text-black font-medium'
+                    }
                   >
-                    <h4
-                      className={
-                        openIndex === index
-                          ? 'text-[#F2D6A2] font-medium'
-                          : 'font-medium'
-                      }
-                    >
-                      {item.question}
-                    </h4>
-                    <svg
-                      className={`w-5 h-5 text-gray-500 ${
-                        openIndex === index ? 'transform rotate-180' : ''
-                      }`}
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </a>
-                  {openIndex === index && (
-                    <div className="mt-3 text-gray-600">
-                      <p>{item.answer}</p>
-                    </div>
-                  )}
-                </div>
+                    {item.question}
+                  </h4>
+                  <svg
+                    className={`w-5 h-5 text-[#d3d3cb] ${
+                      openIndex === index ? 'transform rotate-180' : ''
+                    }`}
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </a>
+                {openIndex === index && (
+                  <div className="mt-3 text-black">
+                    <p>{item.answer}</p>
+                  </div>
+                )}
               </div>
             ))}
         </div>

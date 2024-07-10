@@ -10,3 +10,9 @@
     zoom: 80%;
     /* o transform: scale(0.8); */
 }
+
+.playfair-display-letras {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

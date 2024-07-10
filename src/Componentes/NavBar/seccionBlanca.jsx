@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div>
       {' '}
-      <header className="fondoheader flex shadow-sm bg-white font-sans min-h-[70px]">
+      <header className="fondoheader  flex shadow-sm bg-white font-sans min-h-[70px]">
         <div className="flex flex-wrap items-center justify-between sm:px-10 px-6 py-3 relative lg:gap-y-4 gap-y-6 gap-x-4 w-full">
           <div className="flex">
             <button id="toggleOpen" onClick={handleClickBoton}>
@@ -92,35 +92,23 @@ const Navbar = () => {
 
           <ul className="mt-12 space-y-2 px-4">
             <li className="border-b border-gray-300">
-              <a
-                href="#"
-                className="block py-4 text-lg text-white hover:bg-gray-100"
-              >
+              <a href="#" className="block py-4 text-lg text-white ">
                 Home
               </a>
             </li>
             <li className="border-b border-gray-300">
-              <a
-                href="#"
-                className="block py-4 text-lg text-white hover:bg-gray-100"
-              >
-                About
+              <a href="#Nosotros" className="block py-4 text-lg text-white ">
+                Nosotros
               </a>
             </li>
             <li className="border-b border-gray-300">
-              <a
-                href="#"
-                className="block py-4 text-lg text-white hover:bg-gray-100"
-              >
-                Services
+              <a href="#Inverti" className="block py-4 text-lg text-white">
+                Inverti
               </a>
             </li>
             <li className="border-b border-gray-300">
-              <a
-                href="#"
-                className="block py-4 text-lg text-white hover:bg-gray-100"
-              >
-                Contact
+              <a href="#contacto" className="block py-4 text-lg text-white">
+                Contacto
               </a>
             </li>
           </ul>

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './inversion.css'; // Asegúrate de importar tu archivo CSS aquí
-import { Input, Textarea } from '@nextui-org/react';
 import VideoBackground from '../BannerVideo/bannerVideo';
-import VideoBackgroundVaca from '../BannerVideoVacamuerta/bannerVideo';
 
 function Contacto() {
   const [isSending, setIsSending] = useState(false); // Estado para indicar si se está enviando el formulario
@@ -66,11 +64,22 @@ function Contacto() {
   }
 
   return (
-    <div id="contacto" className="contenedores1-zoom">
+    <div
+      id="contacto"
+      className="contenedores1-zoom playfair-display-letras bg-[#F2F2F2]"
+    >
+      <br></br>
       <div className="grid md:grid-cols-2 mt-15 gap-16 items-center relative overflow-hidden p-10 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-[#F2F2F2] text-[#333] my-6 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#f2d6a2] before:h-full max-md:before:hidden">
         <div>
-          <VideoBackground />
-          <p className="text-sm text-black-400 mt-3">
+          <h2 className="hidden lg:block lg:text-5xl md:text-5xl text-3xl font-extrabold text-[#404040] mb-4 lg:!leading-[55px] sm:text-4xl sm:leading-tight lg:mt-[-20px] md:mt-[-10px]">
+            Contactate
+          </h2>
+
+          {/* En móviles, muestra el video */}
+          <div className="lg:hidden">
+            <VideoBackground />
+          </div>
+          <p className="text-sm text-black-400 playfair-display-letras  mt-3">
             ¿Tienes una consulta específica o estás buscando explorar nuevas
             oportunidades? Nuestro equipo experimentado está listo para
             colaborar contigo.
@@ -81,7 +90,7 @@ function Contacto() {
                 type="text"
                 name="from_name"
                 placeholder="Nombre completo"
-                className="px-2 py-3 bg-white w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
+                className="px-2 playfair-display-letras py-3 bg-white w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
                 onChange={handleInputChange}
               />
 
@@ -89,7 +98,7 @@ function Contacto() {
                 type="tel"
                 name="from_mobile"
                 placeholder="Teléfono"
-                className="px-2 py-3 bg-white text-black w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
+                className="px-2 py-3 playfair-display-letras bg-white text-black w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
                 onChange={handleInputChange}
               />
 
@@ -97,26 +106,30 @@ function Contacto() {
                 type="email"
                 name="from_email"
                 placeholder="Email"
-                className="px-2 py-3 bg-white text-black w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
+                className="px-2 py-3 bg-white playfair-display-letras text-black w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
                 onChange={handleInputChange}
               />
 
               <textarea
                 name="mensaje"
                 placeholder="Escribe tu mensaje"
-                className="px-2 pt-3 bg-white text-black w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
+                className="px-2 pt-3 bg-white playfair-display-letras text-black w-full text-sm border-b-2 focus:border-[#f2d6a2] outline-none"
                 onChange={handleInputChange}
               ></textarea>
             </div>
             {errorMessage && (
-              <p className="text-red-500 text-sm mt-2">{errorMessage}</p>
+              <p className="text-red-500 playfair-display-letras text-sm mt-2">
+                {errorMessage}
+              </p>
             )}
             {successMessage && (
-              <p className="text-green-500 text-sm mt-2">{successMessage}</p>
+              <p className="text-green-500  playfair-display-letras text-sm mt-2">
+                {successMessage}
+              </p>
             )}
             <button
               type="submit"
-              className={`mt-8 flex items-center justify-center text-sm w-full rounded px-4 py-2.5 font-semibold bg-[#333] text-white hover:bg-[#222] ${
+              className={`mt-8 playfair-display-letras flex items-center justify-center text-sm w-full rounded px-4 py-2.5 font-semibold bg-[#333] text-white hover:bg-[#222] ${
                 isSending ? 'opacity-50 cursor-not-allowed' : ''
               }`}
               disabled={isSending}

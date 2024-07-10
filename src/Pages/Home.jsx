@@ -73,17 +73,19 @@ function Home() {
 
       {/* Contenido de la primera sección */}
       <div id="separador">
-        <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
-        <Porque></Porque>
+        <ResponsiveImageTextComponent id="Nosotros" />
+        <Porque id="Inverti"></Porque>
         <BannerINversion />
         <TimeLine />
         <GaleriaImagenes />
-        <div className="bg-[#F2F2F2]">
+        <div className="bg-[#fdfef4]">
           <Faqs />
           <br />
+
           <Contacto id="contacto" />
-          <Footer />
         </div>
+
+        <Footer />
       </div>
 
       {/* Logo flotante, visible solo si showLogo es true */}

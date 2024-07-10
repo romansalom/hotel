@@ -114,11 +114,8 @@ const ResponsiveImageTextComponent = () => {
   };
 
   return (
-    <div className="contenedores playfair-display ">
-      <div
-        id="responsiveImageTextComponent"
-        className="container mx-auto p-4 mb-8"
-      >
+    <div className="contenedores playfair-display bg-[#fdfef4] ">
+      <div id="Nosotros" className="container mx-auto p-4 mb-8">
         {/* Primer bloque de contenido */}
 
         <section className="text-[#262626] body-font overflow-hidden">
@@ -188,7 +185,7 @@ const ResponsiveImageTextComponent = () => {
         {/* Tercer bloque de contenido */}
         <div
           className="flex flex-col md:flex-row items-center justify-center"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
           <section className="text-[#262626] body-font overflow-hidden">
             <div className="relative z-10"></div>
@@ -254,7 +251,7 @@ const ResponsiveImageTextComponent = () => {
         <br></br>
         <div
           className="flex flex-col md:flex-row items-center justify-center"
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
           <section className="text-[#262626] body-font overflow-hidden">
             <div className="relative z-10"></div>
