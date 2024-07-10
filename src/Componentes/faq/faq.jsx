@@ -140,7 +140,7 @@ const Faqs = () => {
   return (
     <div className="playfair-display-letras mx-auto max-w-6xl p-2 rounded bg-[#ffffff]">
       <div className="flex justify-center items-center flex-col mt-5">
-        <h2 className="lg:text-4xl md:text-4xl text-3xl font-extrabold mb-4 lg:!leading-[55px] lg:mt-10 sm:text-4xl sm:leading-tight text-black">
+        <h2 className="lg:text-4xl md:text-4xl text-3xl font-extrabold mb-4 lg:!leading-[55px]  sm:text-4xl sm:leading-tight text-black">
           Preguntas frecuentes
         </h2>
         <div className="w-full max-w-xs relative text-gray-7600">
@@ -198,6 +198,7 @@ const Faqs = () => {
                 </a>
                 {openIndex === index && (
                   <div className="mt-3 text-black">
+                    <div className="playfair-display-letras flex border-t border-black py-2"></div>
                     <p>{item.answer}</p>
                   </div>
                 )}
