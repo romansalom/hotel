@@ -14,11 +14,13 @@ const BannerINversion = () => {
   }, []);
 
   return (
-    <div className="bg-[#404040] px-8 py-14 font-[sans-serif] text-gray-300 overflow-hidden">
+    <div className="bg-[#404040] playfair-display  px-8 py-14 font-[sans-serif] text-gray-300 overflow-hidden">
       {/* overflow-hidden evita que el contenido desborde horizontalmente */}
       <div className="grid md:grid-cols-2 items-center gap-12 max-w-6xl mx-auto">
         <div>
-          <h1 className="text-4xl font-bold text-[#f2d6a2]">Startup Website</h1>
+          <h1 className="text-4xl font-bold text-[#f2d6a2]">
+            ¿Cómo comenzar a invertir?
+          </h1>
           <p className="mt-6 text-ml">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
             accumsan, nunc et tempus blandit, metus mi consectetur nibh, a

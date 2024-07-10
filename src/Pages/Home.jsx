@@ -12,7 +12,7 @@ import GaleriaImagenes from '../Componentes/GaleriaImagenes/galeriaDeImagenes.js
 import Navbar, {
   handleClickBoton,
 } from '../Componentes/NavBar/seccionBlanca.jsx';
-import UnderHeader from '../Componentes/UnderHeader/unerHeader.jsx';
+import Porque from '../Componentes/BannerPorque/bannerPoruqe.jsx';
 
 function Home() {
   const [showLogo, setShowLogo] = useState(false);
@@ -70,16 +70,14 @@ function Home() {
       <Navbar />
 
       <Headers />
-      <UnderHeader></UnderHeader>
 
       {/* Contenido de la primera sección */}
       <div id="separador">
         <ResponsiveImageTextComponent id="responsiveImageTextComponent" />
-
+        <Porque></Porque>
         <BannerINversion />
         <TimeLine />
         <GaleriaImagenes />
-
         <div className="bg-[#F2F2F2]">
           <Faqs />
           <br />

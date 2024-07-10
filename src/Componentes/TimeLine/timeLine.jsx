@@ -67,7 +67,7 @@ const TimeLine = () => {
   ];
 
   return (
-    <div className="timeline-container bg-[#404040]">
+    <div className="timeline-container playfair-display bg-[#404040]">
       <div className="timeline-line"></div>
       <ul className="timeline">
         {timelineItems.map((item, index) => (
@@ -77,6 +77,7 @@ const TimeLine = () => {
             <div className="corner-sticker"></div>
             <time className="fecha font-mono italic">{item.date}</time>
             <li key={index} className="timeline-item" data-aos="fade-up">
+              {' '}
               <div className="timeline-content">
                 <div className="timeline-text">
                   <div className="text-lg font-black">{item.title}</div>
