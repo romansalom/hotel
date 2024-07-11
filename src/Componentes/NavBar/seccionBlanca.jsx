@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div>
       {' '}
-      <header className="fondoheader  flex shadow-sm bg-white font-sans min-h-[70px]">
+      <header className="fondoheader playfair-display  flex shadow-sm bg-white font-sans min-h-[70px]">
         <div className="flex flex-wrap items-center justify-between sm:px-10 px-6 py-3 relative lg:gap-y-4 gap-y-6 gap-x-4 w-full">
           <div className="flex">
             <button id="toggleOpen" onClick={handleClickBoton}>

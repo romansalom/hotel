@@ -52,3 +52,9 @@
     z-index: 1000;
     /* Asegura que esté por encima de otros elementos */
 }
+
+.playfair-display {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

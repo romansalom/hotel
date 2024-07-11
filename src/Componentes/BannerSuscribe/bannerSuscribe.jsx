@@ -41,7 +41,7 @@ function BannnerSuscribe({ onClose }) {
   };
 
   return (
-    <div className="banner flex items-center justify-center fixed inset-0 bg-gray-800 bg-opacity-50 z-50">
+    <div className="banner playfair-display flex items-center justify-center fixed inset-0 bg-gray-800 bg-opacity-50 z-50">
       <div className="relative flex flex-col items-center gap-y-3 p-5 bg-gradient-to-br from-[#404040] to-[#f2d6a2] text-white rounded-xl max-w-[408px] max-h-[374.4px] shadow-lg transform hover:scale-105 transition-transform duration-300">
         <div className="self-end">
           <button onClick={onClose} className="text-white">
