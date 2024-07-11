@@ -83,9 +83,8 @@ function Home() {
           <br />
 
           <Contacto id="contacto" />
+          <Footer />
         </div>
-
-        <Footer />
       </div>
 
       {/* Logo flotante, visible solo si showLogo es true */}

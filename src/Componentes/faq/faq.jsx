@@ -139,10 +139,14 @@ const Faqs = () => {
 
   return (
     <div className="playfair-display-letras mx-auto max-w-6xl p-2 rounded bg-[#ffffff]">
+      <br></br>
+      <br></br>
+
       <div className="flex justify-center items-center flex-col mt-5">
-        <h2 className="lg:text-4xl md:text-4xl text-3xl font-extrabold mb-4 lg:!leading-[55px]  sm:text-4xl sm:leading-tight text-black">
+        <h2 className="lg:text-5xl md:text-5xl text-3xl font-extrabold text-[#404040] mb-4 lg:!leading-[55px] sm:text-4xl sm:leading-tight lg:mt-[-20px] md:mt-[-10px]">
           Preguntas frecuentes
         </h2>
+        <br></br>
         <div className="w-full max-w-xs relative text-gray-7600">
           <input
             value={search}
@@ -164,7 +168,10 @@ const Faqs = () => {
           {filteredFaqItems
             .slice(0, showAll ? filteredFaqItems.length : initialDisplayCount)
             .map((item, index) => (
-              <div key={index} className="bg-white shadow-md rounded-lg p-4">
+              <div
+                key={index}
+                className="bg-[#f6f6f6] shadow-md rounded-lg p-4"
+              >
                 <a
                   href="#"
                   className="flex items-center justify-between text-[#d3d3cb]"
@@ -212,7 +219,7 @@ const Faqs = () => {
               onClick={toggleShowAll}
               className="text-blue-500  py-2 px-4 rounded focus:outline-none"
             >
-              Ver más ({totalPreguntas - 3})
+              Ver más
             </button>
           </div>
         )}

@@ -66,10 +66,10 @@ function Contacto() {
   return (
     <div
       id="contacto"
-      className="contenedores1-zoom playfair-display-letras bg-[#F2F2F2]"
+      className="contenedores1-zoom playfair-display-letras bg-white"
     >
       <br></br>
-      <div className="grid md:grid-cols-2 mt-15 gap-16 items-center relative overflow-hidden p-10 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-[#F2F2F2] text-[#333] my-6 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#f2d6a2] before:h-full max-md:before:hidden">
+      <div className="grid md:grid-cols-2 mt-15 gap-16 items-center relative overflow-hidden p-10 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto  text-[#333] my-6 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-[#e7ebda] before:h-full max-md:before:hidden">
         <div>
           <h2 className="hidden lg:block lg:text-5xl md:text-5xl text-3xl font-extrabold text-[#404040] mb-4 lg:!leading-[55px] sm:text-4xl sm:leading-tight lg:mt-[-20px] md:mt-[-10px]">
             Contactate
@@ -185,8 +185,6 @@ function Contacto() {
           ></iframe>
         </div>
       </div>
-      <br />
-      <br />
     </div>
   );
 }
